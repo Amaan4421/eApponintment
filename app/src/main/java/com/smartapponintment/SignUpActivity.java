@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class SignUpActivity extends AppCompatActivity {
     EditText edtFname;
     EditText edtMail2;
     EditText edtPassword;
+    TextView oldAcc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class SignUpActivity extends AppCompatActivity {
         edtMail2=findViewById(R.id.edt_mail2);
         edtFname=findViewById(R.id.edt_fname);
         edtPassword=findViewById(R.id.edt_password);
+        oldAcc=findViewById(R.id.old_acc);
 
         btnSignup2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +55,14 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Sign Up successful!!", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+        oldAcc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent (SignUpActivity.this,LoginActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_home"
-        android:src="@drawable/bg"/>
+        android:src="@drawable/bg" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ic_home"
@@ -26,11 +26,23 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif"
         android:paddingLeft="20dp"
         android:text="Login"
-        android:textColor="#FAF7F7"
+        android:textColor="#000"
         android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_wlc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="20dp"
+        android:text="Welcome Again!!!"
+        android:textColor="#000"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <RelativeLayout
@@ -38,7 +50,7 @@
         android:layout_height="513dp"
         android:layout_below="@+id/tv_login"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="108dp"
         android:background="@drawable/bg_card"
         android:paddingHorizontal="40dp"
         android:paddingVertical="150dp">
@@ -97,6 +109,20 @@
             android:textColor="#fff"
             android:textStyle="bold" />
 
+
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/new_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_wlc"
+        android:layout_marginTop="600dp"
+        android:layout_centerHorizontal="true"
+        android:text="Don't have an account? Click here to Sign up"
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
 
 </RelativeLayout>

@@ -27,23 +27,23 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
         android:layout_marginTop="40dp"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif"
         android:text="Sign Up"
-        android:textColor="#FAF7F7"
+        android:textColor="#000"
         android:textSize="50sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/tv_wlc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_wlc"
         android:layout_below="@+id/tv_signup"
-        android:text="Welcome!!!"
         android:layout_marginTop="30dp"
         android:paddingHorizontal="20dp"
-        android:textColor="#FDFAFA"
+        android:text="Welcome!!!"
+        android:textColor="#000"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:layout_width="313dp"
@@ -173,5 +173,17 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/old_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_wlc"
+        android:layout_marginTop="600dp"
+        android:layout_centerHorizontal="true"
+        android:text="Already have an account? Click here to Login"
+        android:textColor="#000"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

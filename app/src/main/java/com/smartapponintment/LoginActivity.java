@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.MissingFormatArgumentException;
@@ -19,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     Button edtLogin;
     EditText edtEmail;
     EditText edtPassword;
+    TextView newAcc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         edtLogin = findViewById(R.id.btn_login);
         edtEmail = findViewById(R.id.edt_email2);
         edtPassword = findViewById(R.id.edt_password2);
+        newAcc = findViewById(R.id.new_acc);
 
         edtLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,11 +47,19 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        newAcc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent (LoginActivity.this,SignUpActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
+
         public void onBackPressed ()
         {
-
-
             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
             builder.setTitle("eAppointment");
             builder.setIcon(R.drawable.ic_home2);
