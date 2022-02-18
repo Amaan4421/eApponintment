@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_home"
+        android:src="@drawable/bg" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ic_home"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/ic_home2"/>
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
+        android:text="Sign Up"
+        android:textColor="#FAF7F7"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_wlc"
+        android:layout_below="@+id/tv_signup"
+        android:text="Welcome!!!"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="20dp"
+        android:textColor="#FDFAFA"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="313dp"
+        android:layout_height="534dp"
+        android:layout_below="@+id/tv_wlc"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_card"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="60dp">
+
+        <TextView
+            android:id="@+id/edt_uname"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_baseline_account_circle"
+            android:text="Username:"
+            android:textColor="#FAF8F8" />
+
+        <EditText
+            android:id="@+id/edt_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_uname"
+            android:background="@drawable/edt_bg"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#E91E63" />
+
+        <TextView
+            android:id="@+id/edt_mail"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_fname"
+            android:drawableRight="@drawable/ic_baseline_email"
+            android:text="Email:"
+            android:textColor="#FAF8F8" />
+
+        <EditText
+            android:id="@+id/edt_mail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_mail"
+            android:background="@drawable/edt_bg"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#E91E63" />
+
+        <TextView
+            android:id="@+id/edt_phone"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_mail2"
+            android:drawableRight="@drawable/ic_baseline_phone_android"
+            android:text="Mobile Number:"
+            android:textColor="#FAF8F8" />
+
+        <EditText
+            android:id="@+id/edt_phone2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_phone"
+            android:background="@drawable/edt_bg"
+            android:inputType="number"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#E91E63" />
+
+
+        <TextView
+            android:id="@+id/edt_pass"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_phone2"
+            android:layout_marginTop="5dp"
+            android:drawableRight="@drawable/ic_baseline_lock"
+            android:text="Password:"
+            android:textColor="#FAF8F8" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_pass"
+            android:background="@drawable/edt_bg"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#E91E63" />
+
+        <TextView
+            android:id="@+id/edt_pass2"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_password"
+            android:layout_marginTop="5dp"
+            android:drawableRight="@drawable/ic_baseline_lock"
+            android:text="Confirm Password:"
+            android:textColor="#FAF8F8" />
+
+        <EditText
+            android:id="@+id/edt_password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_pass2"
+            android:background="@drawable/edt_bg"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#E91E63" />
+
+
+        <android.widget.Button
+            android:id="@+id/btn_signup2"
+            android:layout_width="98dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/edt_password2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_bg"
+            android:text="SignUp"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
