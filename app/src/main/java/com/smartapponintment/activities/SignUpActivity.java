@@ -20,7 +20,9 @@ public class SignUpActivity extends AppCompatActivity {
     EditText edtFname;
     EditText edtMail2;
     EditText edtPassword;
+    EditText edtNumber;
     TextView oldAcc;
+    EditText edtPassword2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,8 @@ public class SignUpActivity extends AppCompatActivity {
         edtMail2=findViewById(R.id.edt_mail2);
         edtFname=findViewById(R.id.edt_fname);
         edtPassword=findViewById(R.id.edt_password);
+        edtNumber=findViewById(R.id.edt_phone2);
+        edtPassword2=findViewById(R.id.edt_password2);
         oldAcc=findViewById(R.id.old_acc);
 
         btnSignup2.setOnClickListener(new View.OnClickListener() {
@@ -38,23 +42,35 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String strEmail = edtMail2.getText().toString();
                 String strPassword = edtPassword.getText().toString();
+                String strPassword2 = edtPassword2.getText().toString();
                 String strFname = edtFname.getText().toString();
-                if(strEmail.equals(""))
-                {
-                    Toast.makeText(SignUpActivity.this, "Enter Email id", Toast.LENGTH_SHORT).show();
-                }
-                else if(strFname.equals(""))
+                String strNum = edtNumber.getText().toString();
+                if(strFname.equals(""))
                 {
                     Toast.makeText(SignUpActivity.this, "Enter username", Toast.LENGTH_SHORT).show();
                 }
-
+                else if(strEmail.equals(""))
+                {
+                    Toast.makeText(SignUpActivity.this, "Enter Email id", Toast.LENGTH_SHORT).show();
+                }
+                else if(strNum.equals(""))
+                {
+                    Toast.makeText(SignUpActivity.this, "Enter Mobile Number", Toast.LENGTH_SHORT).show();
+                }
                 else if (strPassword.equals(""))
                 {
                             Toast.makeText(SignUpActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
                 }
+                else if(strPassword2.equals(""))
+                {
+                    Toast.makeText(SignUpActivity.this, "Enter Password again", Toast.LENGTH_SHORT).show();
+                }
                 else
                 {
                     Toast.makeText(SignUpActivity.this, "Sign Up successful!!", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(SignUpActivity.this,BottomNavActivity.class);
+                    startActivity(i);
+                    finish();
                 }
 
             }

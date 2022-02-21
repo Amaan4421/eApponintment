@@ -75,9 +75,13 @@ public class LoginActivity extends AppCompatActivity {
                         } else if (strPassword.equals("")) {
                             Toast.makeText(LoginActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(LoginActivity.this, "Login Successful!!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(LoginActivity.this,BottomNavActivity.class);
+                            startActivity(i);
+                            finish();
                         }
                     }
+
                 });
 
                 newAcc.setOnClickListener(new View.OnClickListener() {
