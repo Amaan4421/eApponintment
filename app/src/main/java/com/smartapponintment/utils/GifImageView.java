@@ -1,4 +1,4 @@
-package com.smartapponintment;
+package com.smartapponintment.utils;
 
 import android.content.Context;
 import android.graphics.Canvas;

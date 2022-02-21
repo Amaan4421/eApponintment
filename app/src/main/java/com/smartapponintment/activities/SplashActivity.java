@@ -1,4 +1,4 @@
-package com.smartapponintment;
+package com.smartapponintment.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.smartapponintment.utils.GifImageView;
+import com.smartapponintment.R;
 
 public class SplashActivity extends AppCompatActivity {
 

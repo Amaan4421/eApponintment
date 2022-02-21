@@ -1,6 +1,5 @@
-package com.smartapponintment;
+package com.smartapponintment.activities;
 
-import androidx.activity.OnBackPressedDispatcherOwner;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.MissingFormatArgumentException;
+import com.smartapponintment.R;
 
 public class LoginActivity extends AppCompatActivity {
 
