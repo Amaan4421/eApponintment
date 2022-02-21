@@ -17,43 +17,30 @@
         android:id="@+id/ic_home"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
-        android:src="@drawable/ic_home2"/>
-
-    <TextView
-        android:id="@+id/tv_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif"
-        android:text="Sign Up"
-        android:textColor="#000"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tv_wlc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_signup"
-        android:layout_marginTop="30dp"
-        android:paddingHorizontal="20dp"
-        android:text="Welcome!!!"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_home2" />
 
     <RelativeLayout
-        android:layout_width="313dp"
-        android:layout_height="534dp"
-        android:layout_below="@+id/tv_wlc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_home"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/bg_card"
         android:paddingHorizontal="40dp"
-        android:paddingVertical="60dp">
+        android:paddingVertical="10dp">
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:text="Sign Up"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/edt_uname"
@@ -61,7 +48,8 @@
             android:layout_height="wrap_content"
             android:drawableRight="@drawable/ic_baseline_account_circle"
             android:text="Username:"
-            android:textColor="#FAF8F8" />
+            android:textColor="#FAF8F8"
+            android:layout_below="@id/tv_signup"/>
 
         <EditText
             android:id="@+id/edt_fname"
@@ -178,12 +166,11 @@
         android:id="@+id/old_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_wlc"
-        android:layout_marginTop="600dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Already have an account? Click here to Login"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:textSize="15dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>

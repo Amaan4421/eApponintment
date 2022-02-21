@@ -16,50 +16,37 @@
         android:id="@+id/ic_home"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/ic_home2" />
 
-    <TextView
-        android:id="@+id/tv_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif"
-        android:paddingLeft="20dp"
-        android:text="Login"
-        android:textColor="#000"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tv_wlc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_login"
-        android:layout_marginTop="30dp"
-        android:paddingHorizontal="20dp"
-        android:text="Welcome Again!!!"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
     <RelativeLayout
-        android:layout_width="308dp"
-        android:layout_height="513dp"
-        android:layout_below="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_home"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/bg_card"
         android:paddingHorizontal="40dp"
-        android:paddingVertical="150dp">
+        android:paddingVertical="10dp">
 
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:text="Login"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/edt_email"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_login"
+            android:layout_marginTop="10dp"
             android:drawableRight="@drawable/ic_baseline_email"
             android:text="Email:"
             android:textColor="#FAF8F8" />
@@ -97,13 +84,23 @@
             android:singleLine="true"
             android:textColor="#E91E63" />
 
+        <TextView
+            android:id="@+id/tv_fp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_password2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="Forgot password?"
+            android:textColor="#fff" />
+
         <android.widget.Button
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_password2"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/btn_bg"
             android:text="Login"
             android:textColor="#fff"
@@ -112,17 +109,16 @@
 
     </RelativeLayout>
 
+
     <TextView
         android:id="@+id/new_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_wlc"
-        android:layout_marginTop="600dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="Don't have an account? Click here to Sign up"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:textSize="15dp"
-        android:textStyle="bold"/>
-
+        android:textStyle="bold" />
 
 </RelativeLayout>
