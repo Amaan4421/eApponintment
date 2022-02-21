@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_view"
-        android:background="@color/purple_500"
+        android:background="@color/purple_700"
         app:menu="@menu/bottom_nav_menu"
         app:itemTextColor="#fff"
         app:itemIconTint="#fff"
