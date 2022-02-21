@@ -16,10 +16,10 @@
         app:titleTextColor="#fff" />
 
     <FrameLayout
+        android:id="@+id/frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frame"
-        android:layout_marginVertical="?attr/actionBarSize"/>
+        android:layout_marginVertical="?attr/actionBarSize" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

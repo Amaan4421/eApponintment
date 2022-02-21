@@ -65,12 +65,17 @@ public class SignUpActivity extends AppCompatActivity {
                 {
                     Toast.makeText(SignUpActivity.this, "Enter Password again", Toast.LENGTH_SHORT).show();
                 }
+
                 else
                 {
-                    Toast.makeText(SignUpActivity.this, "Sign Up successful!!", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(SignUpActivity.this,BottomNavActivity.class);
-                    startActivity(i);
-                    finish();
+                    if(!strPassword.equals(strPassword2)){
+                    Toast.makeText(SignUpActivity.this, "Check your Password", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(SignUpActivity.this, "Sign Up successful!!", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
                 }
 
             }

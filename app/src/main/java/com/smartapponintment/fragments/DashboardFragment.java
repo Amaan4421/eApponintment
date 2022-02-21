@@ -1,4 +1,4 @@
-package com.smartapponintment.ui.dashboard;
+package com.smartapponintment.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.smartapponintment.databinding.FragmentDashboardBinding;
+import com.smartapponintment.ui.dashboard.DashboardViewModel;
 
 public class DashboardFragment extends Fragment {
 

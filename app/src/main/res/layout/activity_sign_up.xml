@@ -22,12 +22,12 @@
         android:src="@drawable/ic_home2" />
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="349dp"
+        android:layout_height="459dp"
         android:layout_below="@+id/ic_home"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
         android:background="@drawable/bg_card"
         android:paddingHorizontal="40dp"
         android:paddingVertical="10dp">
@@ -149,19 +149,19 @@
             android:textColor="#E91E63" />
 
 
-        <android.widget.Button
-            android:id="@+id/btn_signup2"
-            android:layout_width="98dp"
-            android:layout_height="34dp"
-            android:layout_below="@+id/edt_password2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/btn_bg"
-            android:text="SignUp"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
     </RelativeLayout>
+
+    <android.widget.Button
+        android:id="@+id/btn_signup2"
+        android:layout_width="98dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/ic_home"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470dp"
+        android:background="@drawable/btn_bg"
+        android:text="SignUp"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/old_acc"

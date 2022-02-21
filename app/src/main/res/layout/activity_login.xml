@@ -22,11 +22,11 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="295dp"
         android:layout_below="@+id/ic_home"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="60dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/bg_card"
         android:paddingHorizontal="40dp"
         android:paddingVertical="10dp">
@@ -91,24 +91,25 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_password2"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="11dp"
             android:text="Forgot password?"
             android:textColor="#fff" />
 
-        <android.widget.Button
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_password2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/btn_bg"
-            android:text="Login"
-            android:textColor="#fff"
-            android:textStyle="bold" />
-
 
     </RelativeLayout>
+
+    <android.widget.Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_home"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/btn_bg"
+        android:text="Login"
+        android:textColor="#fff"
+        android:textStyle="bold" />
 
 
     <TextView
