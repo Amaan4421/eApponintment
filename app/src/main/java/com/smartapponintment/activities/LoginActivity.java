@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,9 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtPassword;
     TextView newAcc;
     TextView tvfp;
+    RadioGroup radioGroup;
+    RadioButton edtB1;
+    RadioButton edtB2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +38,10 @@ public class LoginActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edt_email2);
         edtPassword = findViewById(R.id.edt_password2);
         newAcc = findViewById(R.id.new_acc);
-
         tvfp = findViewById(R.id.tv_fp);
+        radioGroup =  findViewById(R.id.tv_rg);
+        edtB1 = findViewById(R.id.rb1);
+        edtB2 = findViewById(R.id.rb2);
 
         tvfp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,24 +72,28 @@ public class LoginActivity extends AppCompatActivity {
 
 
         edtLogin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        String strEmail = edtEmail.getText().toString();
-                        String strPassword = edtPassword.getText().toString();
+            @Override
+            public void onClick(View view) {
+                String strEmail = edtEmail.getText().toString();
+                String strPassword = edtPassword.getText().toString();
+                String strB1 = edtB1.getText().toString();
+                String strB2 = edtB2.getText().toString();
 
-                        if (strEmail.equals("")) {
-                            Toast.makeText(LoginActivity.this, "Enter Email id", Toast.LENGTH_SHORT).show();
-                        } else if (strPassword.equals("")) {
-                            Toast.makeText(LoginActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(LoginActivity.this,BottomNavActivity.class);
-                            startActivity(i);
-                            finish();
-                        }
-                    }
+                if (!edtB1.isChecked() && !edtB2.isChecked()) {
+                    Toast.makeText(LoginActivity.this, "Select Doctor or Patient", Toast.LENGTH_SHORT).show();
+                } else if (strEmail.equals("")) {
+                    Toast.makeText(LoginActivity.this, "Enter Email id", Toast.LENGTH_SHORT).show();
+                } else if (strPassword.equals("")) {
+                    Toast.makeText(LoginActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+            }
+        });
 
-                });
 
                 newAcc.setOnClickListener(new View.OnClickListener() {
                     @Override

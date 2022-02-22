@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,9 @@ public class SignUpActivity extends AppCompatActivity {
     EditText edtNumber;
     TextView oldAcc;
     EditText edtPassword2;
+    RadioGroup radioGroup;
+    RadioButton edtB1;
+    RadioButton edtB2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,9 @@ public class SignUpActivity extends AppCompatActivity {
         edtNumber=findViewById(R.id.edt_phone2);
         edtPassword2=findViewById(R.id.edt_password2);
         oldAcc=findViewById(R.id.old_acc);
+        radioGroup =  findViewById(R.id.tv_rg);
+        edtB1 = findViewById(R.id.rb1);
+        edtB2 = findViewById(R.id.rb2);
 
         btnSignup2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +53,13 @@ public class SignUpActivity extends AppCompatActivity {
                 String strPassword2 = edtPassword2.getText().toString();
                 String strFname = edtFname.getText().toString();
                 String strNum = edtNumber.getText().toString();
-                if(strFname.equals(""))
+                String strB1 = edtB1.getText().toString();
+                String strB2 = edtB2.getText().toString();
+
+                if (!edtB1.isChecked() && !edtB2.isChecked()) {
+                    Toast.makeText(SignUpActivity.this, "Select Doctor or Patient", Toast.LENGTH_SHORT).show();
+                }
+                else if(strFname.equals(""))
                 {
                     Toast.makeText(SignUpActivity.this, "Enter username", Toast.LENGTH_SHORT).show();
                 }

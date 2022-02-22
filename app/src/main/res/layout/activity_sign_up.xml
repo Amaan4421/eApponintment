@@ -22,8 +22,8 @@
         android:src="@drawable/ic_home2" />
 
     <RelativeLayout
-        android:layout_width="349dp"
-        android:layout_height="459dp"
+        android:layout_width="347dp"
+        android:layout_height="502dp"
         android:layout_below="@+id/ic_home"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="60dp"
@@ -43,11 +43,40 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        <RadioGroup
+            android:id="@+id/tv_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_signup"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:showDividers="beginning|middle">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Doctor"
+                android:textColor="#fff" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checked="false"
+                android:text="Patient"
+                android:textColor="#fff" />
+
+        </RadioGroup>
+
+
         <TextView
             android:id="@+id/edt_uname"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_signup"
+            android:layout_below="@id/tv_rg"
             android:drawableRight="@drawable/ic_baseline_account_circle"
             android:text="Username:"
             android:textColor="#FAF8F8" />
@@ -58,6 +87,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_uname"
             android:background="@drawable/edt_bg"
+            android:hint="Enter your username"
+            android:textColorHint="#660E0606"
             android:inputType="textPersonName"
             android:padding="5dp"
             android:singleLine="true"
@@ -78,6 +109,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_mail"
             android:background="@drawable/edt_bg"
+            android:hint="Enter your Email"
+            android:textColorHint="#660E0606"
             android:inputType="textEmailAddress"
             android:padding="5dp"
             android:singleLine="true"
@@ -98,6 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_phone"
             android:background="@drawable/edt_bg"
+            android:hint="Enter your Mobile Number"
+            android:textColorHint="#660E0606"
             android:inputType="number"
             android:padding="5dp"
             android:singleLine="true"
@@ -120,6 +155,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_pass"
             android:background="@drawable/edt_bg"
+            android:hint="Enter your Passwprd"
+            android:textColorHint="#660E0606"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:padding="5dp"
@@ -142,6 +179,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_pass2"
             android:background="@drawable/edt_bg"
+            android:hint="Confirm your Password"
+            android:textColorHint="#660E0606"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:padding="5dp"
@@ -157,7 +196,7 @@
         android:layout_height="34dp"
         android:layout_below="@+id/ic_home"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="515dp"
         android:background="@drawable/btn_bg"
         android:text="SignUp"
         android:textColor="#fff"

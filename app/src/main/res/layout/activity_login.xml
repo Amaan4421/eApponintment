@@ -22,7 +22,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="295dp"
+        android:layout_height="352dp"
         android:layout_below="@+id/ic_home"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="60dp"
@@ -42,11 +42,39 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_rg"
+        android:layout_below="@+id/tv_login"
+        android:showDividers="beginning|middle"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Doctor"
+            android:textColor="#fff" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:checked="false"
+                android:text="Patient"
+                android:textColor="#fff"/>
+
+    </RadioGroup>
+
         <TextView
             android:id="@+id/edt_email"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_login"
+            android:layout_below="@+id/tv_rg"
             android:layout_marginTop="10dp"
             android:drawableRight="@drawable/ic_baseline_email"
             android:text="Email:"
@@ -58,6 +86,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_email"
             android:background="@drawable/edt_bg"
+            android:hint="Enter your Email"
+            android:textColorHint="#660E0606"
             android:inputType="textEmailAddress"
             android:padding="5dp"
             android:singleLine="true"
@@ -81,6 +111,8 @@
             android:background="@drawable/edt_bg"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
+            android:hint="Enter your Password"
+            android:textColorHint="#660E0606"
             android:padding="5dp"
             android:singleLine="true"
             android:textColor="#E91E63" />
@@ -105,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ic_home"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="400dp"
         android:background="@drawable/btn_bg"
         android:text="Login"
         android:textColor="#fff"
