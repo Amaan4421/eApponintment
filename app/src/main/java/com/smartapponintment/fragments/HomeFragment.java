@@ -4,35 +4,32 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.smartapponintment.R;
 import com.smartapponintment.databinding.FragmentHomeBinding;
-import com.smartapponintment.ui.home.HomeViewModel;
 
 public class HomeFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+       Button doc1;
+       Button doc2;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
-    }
-
+    @Nullable
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        View rootview = inflater.inflate(R.layout.fragment_home,container,false);
+       doc1 = rootview.findViewById(R.id.doc_1);
+       doc2 = rootview.findViewById(R.id.doc_2);
+
+       return rootview;
     }
 }

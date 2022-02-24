@@ -32,14 +32,7 @@ public class ProfileFragment extends Fragment {
                 SharedPreferences sharedPreferences = getContext().getSharedPreferences("e_Appointment", Context.MODE_PRIVATE);
                 String strEmail = sharedPreferences.getString("KEY_PREF_EMAIL", "");
                 TextView tvEmail = rootView.findViewById(R.id.text);
-
-
-/*
-                View headerView = navigationView.getHeaderView(0);
- */               tvEmail.setText(strEmail);
-
-
-
+                tvEmail.setText(strEmail);
 
                 return rootView;
         }

@@ -22,7 +22,9 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
 import com.smartapponintment.R;
 import com.smartapponintment.databinding.ActivityBottomNavBinding;
+import com.smartapponintment.fragments.HomeFragment;
 import com.smartapponintment.fragments.ProfileFragment;
+import com.smartapponintment.fragments.SettingFragment;
 
 public class BottomNavActivity extends AppCompatActivity {
 
@@ -47,9 +49,9 @@ public class BottomNavActivity extends AppCompatActivity {
 
                 if (id == R.id.nav_home) {
 
-//                    fragment = new HomeFragment();
-//                    fragmentTransaction.replace(R.id.frame,fragment);
-//                    fragmentTransaction.commit();
+                    fragment = new HomeFragment();
+                    fragmentTransaction.replace(R.id.frame,fragment);
+                    fragmentTransaction.commit();
                     toolbar.setTitle("Home");
 
                 } else if (id == R.id.nav_book) {
@@ -70,9 +72,9 @@ public class BottomNavActivity extends AppCompatActivity {
                 } else if (id == R.id.nav_setting) {
 
                     toolbar.setTitle("Setting");
-//                    fragment = new GalleryFragment();
-//                    fragmentTransaction.replace(R.id.frame,fragment);
-//                    fragmentTransaction.commit();
+                    fragment = new SettingFragment();
+                    fragmentTransaction.replace(R.id.frame,fragment);
+                    fragmentTransaction.commit();
                 }
                     return true;
                 }
