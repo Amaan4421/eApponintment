@@ -22,23 +22,25 @@ import org.w3c.dom.Text;
 public class ProfileFragment extends Fragment {
 
 
-        NavigationView navigationView;
 
         @Nullable
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+                View rootView = inflater.inflate(R.layout.fragment_profile,container,false);
+
                 SharedPreferences sharedPreferences = getContext().getSharedPreferences("e_Appointment", Context.MODE_PRIVATE);
                 String strEmail = sharedPreferences.getString("KEY_PREF_EMAIL", "");
+                TextView tvEmail = rootView.findViewById(R.id.text);
 
 
+/*
                 View headerView = navigationView.getHeaderView(0);
-                TextView tvEmail = headerView.findViewById(R.id.text);
-                tvEmail.setText(strEmail);
+ */               tvEmail.setText(strEmail);
 
 
 
 
-                return headerView;
+                return rootView;
         }
 }

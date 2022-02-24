@@ -28,7 +28,6 @@ public class BottomNavActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
-    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,7 @@ public class BottomNavActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bottom_nav);
         bottomNavigationView = findViewById(R.id.bottom_view);
         toolbar = findViewById(R.id.toolbar);
-        navigationView = findViewById(R.id.bottom_view);
+
         setSupportActionBar(toolbar);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
