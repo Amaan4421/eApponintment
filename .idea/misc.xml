@@ -8,17 +8,23 @@
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/btn_bg.xml" value="0.1335" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/edt_bg.xml" value="0.1" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_account_circle.xml" value="0.1345" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_email.xml" value="0.1" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_lock.xml" value="0.1" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_person_outline.xml" value="0.1345" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_phone_android.xml" value="0.1" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_settings.xml" value="0.1345" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1345" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1475" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_alert.xml" value="0.15477293790546803" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_bottom_nav.xml" value="0.2" />
-        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_dashboard.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_home.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_notifications.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_fp.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />

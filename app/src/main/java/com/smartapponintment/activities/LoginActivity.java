@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton edtB1;
     RadioButton edtB2;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,17 +82,40 @@ public class LoginActivity extends AppCompatActivity {
                 String strB1 = edtB1.getText().toString();
                 String strB2 = edtB2.getText().toString();
 
-                if (!edtB1.isChecked() && !edtB2.isChecked()) {
+                if (!edtB1.isChecked() && !edtB2.isChecked())
+                {
                     Toast.makeText(LoginActivity.this, "Select Doctor or Patient", Toast.LENGTH_SHORT).show();
-                } else if (strEmail.equals("")) {
+                }
+                else if (strEmail.equals(""))
+                {
                     Toast.makeText(LoginActivity.this, "Enter Email id", Toast.LENGTH_SHORT).show();
-                } else if (strPassword.equals("")) {
+                }
+                else if (!strEmail.matches(emailPattern))
+                {
+                    Toast.makeText(LoginActivity.this, "Enter valid Email id", Toast.LENGTH_SHORT).show();
+                }
+                else if (strPassword.equals(""))
+                {
                     Toast.makeText(LoginActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
-                } else {
+                }
+                else if (strPassword.length()<8)
+                {
+                    Toast.makeText(LoginActivity.this, "Password must be have 8 characters or number", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment",MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("KEY_PREF_EMAIL",strEmail);
+                    editor.putString("KEY_PREF_Password",strPassword);
+                    editor.commit();
+
                     Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
                     startActivity(i);
                     finish();
+
+
                 }
             }
         });

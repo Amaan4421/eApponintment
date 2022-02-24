@@ -15,7 +15,7 @@
         android:theme="@style/Theme.SmartApponintment">
         <activity
             android:name=".activities.BottomNavActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_bottom_nav" />
         <activity
             android:name=".activities.AlertActivity"

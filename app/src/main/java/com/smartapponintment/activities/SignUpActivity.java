@@ -25,6 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
     EditText edtNumber;
     TextView oldAcc;
     EditText edtPassword2;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     RadioGroup radioGroup;
     RadioButton edtB1;
     RadioButton edtB2;
@@ -67,6 +68,9 @@ public class SignUpActivity extends AppCompatActivity {
                 {
                     Toast.makeText(SignUpActivity.this, "Enter Email id", Toast.LENGTH_SHORT).show();
                 }
+                else if (!strEmail.matches(emailPattern)) {
+                    Toast.makeText(SignUpActivity.this, "Enter valid Email id", Toast.LENGTH_SHORT).show();
+                }
                 else if(strNum.equals(""))
                 {
                     Toast.makeText(SignUpActivity.this, "Enter Mobile Number", Toast.LENGTH_SHORT).show();
@@ -75,9 +79,13 @@ public class SignUpActivity extends AppCompatActivity {
                 {
                             Toast.makeText(SignUpActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
                 }
+                else if (strPassword.length()<8)
+                {
+                    Toast.makeText(SignUpActivity.this, "Password must be have 8 characters or number", Toast.LENGTH_SHORT).show();
+                }
                 else if(strPassword2.equals(""))
                 {
-                    Toast.makeText(SignUpActivity.this, "Enter Password again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Confirm your password", Toast.LENGTH_SHORT).show();
                 }
 
                 else

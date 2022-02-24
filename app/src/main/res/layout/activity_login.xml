@@ -76,7 +76,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_rg"
             android:layout_marginTop="10dp"
-            android:drawableRight="@drawable/ic_baseline_email"
             android:text="Email:"
             android:textColor="#FAF8F8" />
 
@@ -87,6 +86,7 @@
             android:layout_below="@+id/edt_email"
             android:background="@drawable/edt_bg"
             android:hint="Enter your Email"
+            android:drawableRight="@drawable/ic_baseline_email"
             android:textColorHint="#660E0606"
             android:inputType="textEmailAddress"
             android:padding="5dp"
@@ -99,7 +99,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/edt_email2"
             android:layout_marginTop="5dp"
-            android:drawableRight="@drawable/ic_baseline_lock"
             android:text="Password:"
             android:textColor="#FAF8F8" />
 
@@ -112,6 +111,7 @@
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:hint="Enter your Password"
+            android:drawableRight="@drawable/ic_baseline_lock"
             android:textColorHint="#660E0606"
             android:padding="5dp"
             android:singleLine="true"

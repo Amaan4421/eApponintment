@@ -1,7 +1,11 @@
 package com.smartapponintment.activities;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -15,13 +19,16 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.navigation.NavigationView;
 import com.smartapponintment.R;
 import com.smartapponintment.databinding.ActivityBottomNavBinding;
+import com.smartapponintment.fragments.ProfileFragment;
 
 public class BottomNavActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     Toolbar toolbar;
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,7 @@ public class BottomNavActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bottom_nav);
         bottomNavigationView = findViewById(R.id.bottom_view);
         toolbar = findViewById(R.id.toolbar);
+        navigationView = findViewById(R.id.bottom_view);
         setSupportActionBar(toolbar);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -54,10 +62,11 @@ public class BottomNavActivity extends AppCompatActivity {
 
                 } else if (id == R.id.nav_profile) {
 
+                    fragment = new ProfileFragment();
                     toolbar.setTitle("Profile");
-//                    fragment = new GalleryFragment();
-//                    fragmentTransaction.replace(R.id.frame,fragment);
-//                    fragmentTransaction.commit();
+                    fragmentTransaction.replace(R.id.frame, fragment);
+                    fragmentTransaction.commit();
+
 
                 } else if (id == R.id.nav_setting) {
 
