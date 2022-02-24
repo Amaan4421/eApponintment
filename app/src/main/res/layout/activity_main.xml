@@ -14,14 +14,14 @@
         android:src="@drawable/bg" />
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/ic_applogo"
         android:layout_width="134dp"
         android:layout_height="119dp"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="60dp"
-        android:src="@drawable/ic_applogo" />
+        android:src="@drawable/applogo" />
 
 
     <TextView

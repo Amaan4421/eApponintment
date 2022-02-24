@@ -118,7 +118,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
         builder.setTitle("eAppointment");
-        builder.setIcon(R.drawable.ic_home2);
+        builder.setIcon(R.drawable.applogo);
         builder.setMessage("Are you sure, you want to Back?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 

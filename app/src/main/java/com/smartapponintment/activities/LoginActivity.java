@@ -134,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onBackPressed() {
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 builder.setTitle("eAppointment");
-                builder.setIcon(R.drawable.ic_home2);
+                builder.setIcon(R.drawable.applogo);
                 builder.setMessage("Are you sure, you want to Back?");
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
