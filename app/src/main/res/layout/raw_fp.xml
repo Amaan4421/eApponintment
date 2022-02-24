@@ -13,6 +13,7 @@
         android:id="@+id/edt_email"
         android:padding="20dp"
         android:hint="Enter your email"
+        android:textColorHint="#660E0606"
         android:background="@drawable/edt_bg"/>
 
     <Button
