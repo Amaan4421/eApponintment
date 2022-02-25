@@ -40,12 +40,19 @@ public class BottomNavActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame, new HomeFragment())
+                .commit();
+        toolbar.setTitle("Home");
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
+
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 Fragment fragment = null;
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
 
                 if (id == R.id.nav_home) {
 
@@ -54,7 +61,8 @@ public class BottomNavActivity extends AppCompatActivity {
                     fragmentTransaction.commit();
                     toolbar.setTitle("Home");
 
-                } else if (id == R.id.nav_book) {
+                }
+                else if (id == R.id.nav_book) {
 
                     toolbar.setTitle("Book Appointment");
 //                    fragment = new GalleryFragment();

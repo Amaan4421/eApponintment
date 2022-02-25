@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,6 +30,20 @@ public class HomeFragment extends Fragment {
         View rootview = inflater.inflate(R.layout.fragment_home,container,false);
        doc1 = rootview.findViewById(R.id.doc_1);
        doc2 = rootview.findViewById(R.id.doc_2);
+
+       doc1.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Toast.makeText(getActivity(),"You clicked first button",Toast.LENGTH_SHORT).show();
+           }
+       });
+
+       doc2.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               Toast.makeText(getActivity(),"You clicked second button",Toast.LENGTH_SHORT).show();
+           }
+       });
 
        return rootview;
     }
