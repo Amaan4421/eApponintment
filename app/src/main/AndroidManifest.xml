@@ -14,6 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartApponintment">
         <activity
+            android:name=".activities.BottomDocActivity"
+            android:exported="true"
+            android:label="BottomDocNavActivity" />
+        <activity
             android:name=".activities.BottomNavActivity"
             android:exported="true"
             android:label="@string/title_activity_bottom_nav" />

@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/doc_home"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
-
+        android:title="Home" />
     <item
-        android:id="@+id/nav_book"
-        android:icon="@drawable/ic_baseline_book_online"
-        android:title="Appointments" />
-
+        android:id="@+id/doc_schedule"
+        android:icon="@drawable/ic_baseline_schedule_24"
+        android:title="schedule" />
     <item
-        android:id="@+id/nav_setting"
+        android:id="@+id/doc_settings"
         android:icon="@drawable/ic_baseline_settings"
         android:title="Settings" />
-
     <item
-        android:id="@+id/nav_profile"
+        android:id="@+id/doc_profile"
         android:icon="@drawable/ic_baseline_account_circle"
         android:title="Profile" />
-
-
 
 </menu>

@@ -110,12 +110,17 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("KEY_PREF_EMAIL",strEmail);
                     editor.putString("KEY_PREF_Password",strPassword);
                     editor.commit();
-
-                    Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
-                    startActivity(i);
-                    finish();
-
-
+                    if(edtB2.isChecked()) {
+                        Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                    else
+                    {
+                        Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
                 }
             }
         });
