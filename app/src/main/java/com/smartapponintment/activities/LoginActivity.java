@@ -17,6 +17,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.smartapponintment.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -31,11 +34,17 @@ public class LoginActivity extends AppCompatActivity {
     RadioButton edtB2;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        firebaseDatabase = FirebaseDatabase.getInstance("https://eappointment-4ccdb-default-rtdb.asia-southeast1.firebasedatabase.app/");
+        databaseReference=firebaseDatabase.getReference("User");
+
 
         edtLogin = findViewById(R.id.btn_login);
         edtEmail = findViewById(R.id.edt_email2);
@@ -110,6 +119,9 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("KEY_PREF_EMAIL",strEmail);
                     editor.putString("KEY_PREF_Password",strPassword);
                     editor.commit();
+
+                  databaseReference.setValue("Hello Amaan");
+
                     if(edtB2.isChecked()) {
                         Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
                         startActivity(i);

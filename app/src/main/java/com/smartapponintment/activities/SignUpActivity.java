@@ -94,9 +94,15 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Check your Password", Toast.LENGTH_SHORT).show();
                     }else {
                         Toast.makeText(SignUpActivity.this, "Sign Up successful!!", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
-                        startActivity(i);
-                        finish();
+                        if(edtB2.isChecked()) {
+                            Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
+                            startActivity(i);
+                            finish();
+                        }else{
+                            Intent i = new Intent(SignUpActivity.this, BottomDocActivity.class);
+                            startActivity(i);
+                            finish();
+                        }
                     }
                 }
 
