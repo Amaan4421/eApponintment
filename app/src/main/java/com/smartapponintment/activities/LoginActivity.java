@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     RadioButton edtB3;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     String emailAdmin = "admin27@gmail.com";
-    String passAdmin = "admin27";
+    String passAdmin = "admin273";
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -125,6 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.commit();
 
                   databaseReference.setValue("Hello Amaan");
+
 
                     if(edtB3.isChecked()) {
                         Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
