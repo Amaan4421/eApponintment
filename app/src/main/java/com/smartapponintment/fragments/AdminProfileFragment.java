@@ -16,8 +16,8 @@ import androidx.fragment.app.Fragment;
 import com.smartapponintment.R;
 import com.smartapponintment.activities.LoginActivity;
 
+public class AdminProfileFragment extends Fragment {
 
-public class SettingFragment extends Fragment {
 
     Button btnLogout;
 
@@ -27,7 +27,7 @@ public class SettingFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.fragment_setting,container,false);
+        View rootview = inflater.inflate(R.layout.fragment_admin_profile,container,false);
         btnLogout = rootview.findViewById(R.id.btn_logout);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -38,10 +38,12 @@ public class SettingFragment extends Fragment {
                 editor.remove("KEY_PREF_EMAIL");
                 editor.remove("KEY_PREF_Password");
                 editor.commit();
-                Intent i = new Intent(getActivity(),LoginActivity.class);
+                Intent i = new Intent(getActivity(), LoginActivity.class);
                 startActivity(i);
             }
         });
         return rootview;
     }
+
+
 }

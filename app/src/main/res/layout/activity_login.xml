@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/tv_rg"
         android:layout_below="@+id/tv_login"
-        android:showDividers="beginning|middle"
+        android:showDividers="beginning|middle|end"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true">
 
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:text="Doctor"
+            android:text="Admin"
             android:textColor="#fff" />
 
             <RadioButton
@@ -65,8 +65,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:checked="false"
-                android:text="Patient"
+                android:text="Doctor"
                 android:textColor="#fff"/>
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:checked="false"
+            android:text="Patient"
+            android:textColor="#fff"/>
 
     </RadioGroup>
 

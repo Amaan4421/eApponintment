@@ -1,8 +1,5 @@
 package com.smartapponintment.activities;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,7 +14,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.FirebaseApp;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.smartapponintment.R;
@@ -32,7 +31,10 @@ public class LoginActivity extends AppCompatActivity {
     RadioGroup radioGroup;
     RadioButton edtB1;
     RadioButton edtB2;
+    RadioButton edtB3;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    String emailAdmin = "admin27@gmail.com";
+    String passAdmin = "admin27";
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -42,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        firebaseDatabase = FirebaseDatabase.getInstance("https://eappointment-4ccdb-default-rtdb.asia-southeast1.firebasedatabase.app/");
+        firebaseDatabase = FirebaseDatabase.getInstance("https://eappointment-b69f7-default-rtdb.asia-southeast1.firebasedatabase.app/");
         databaseReference=firebaseDatabase.getReference("User");
 
 
@@ -54,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         radioGroup =  findViewById(R.id.tv_rg);
         edtB1 = findViewById(R.id.rb1);
         edtB2 = findViewById(R.id.rb2);
+        edtB3 = findViewById(R.id.rb3);
 
         tvfp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,10 +93,11 @@ public class LoginActivity extends AppCompatActivity {
                 String strPassword = edtPassword.getText().toString();
                 String strB1 = edtB1.getText().toString();
                 String strB2 = edtB2.getText().toString();
+                String strB3 = edtB3.getText().toString();
 
-                if (!edtB1.isChecked() && !edtB2.isChecked())
+                if (!edtB1.isChecked() && !edtB2.isChecked() && !edtB3.isChecked())
                 {
-                    Toast.makeText(LoginActivity.this, "Select Doctor or Patient", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Select Doctor or Patient or Admin", Toast.LENGTH_SHORT).show();
                 }
                 else if (strEmail.equals(""))
                 {
@@ -113,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+
                     SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment",MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("KEY_PREF_EMAIL",strEmail);
@@ -122,16 +126,30 @@ public class LoginActivity extends AppCompatActivity {
 
                   databaseReference.setValue("Hello Amaan");
 
-                    if(edtB2.isChecked()) {
+                    if(edtB3.isChecked()) {
                         Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                    else if(edtB2.isChecked())
+                    {
+                        Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
                         startActivity(i);
                         finish();
                     }
                     else
                     {
-                        Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
-                        startActivity(i);
-                        finish();
+                        if(strEmail.equals(emailAdmin) && strPassword.equals(passAdmin))
+                        {
+                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(LoginActivity.this, BottomAdminActivity.class);
+                             startActivity(i);
+                            finish();
+                        }
+                        else
+                        {
+                            Toast.makeText(LoginActivity.this,"Enter Valid email or password",Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             }
