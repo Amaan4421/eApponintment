@@ -10,8 +10,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.smartapponintment.R;
+import com.smartapponintment.adapters.ImageAdapter;
 
 public class HomeFragment extends Fragment {
 
@@ -25,7 +27,15 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootview = inflater.inflate(R.layout.fragment_home,container,false);
-       doc1 = rootview.findViewById(R.id.doc_1);
+
+
+        ViewPager mViewPager = rootview.findViewById(R.id.viewPage);
+        ImageAdapter adapterView = new ImageAdapter(this);
+        mViewPager.setAdapter(adapterView);
+
+
+
+        doc1 = rootview.findViewById(R.id.doc_1);
        doc2 = rootview.findViewById(R.id.doc_2);
 
        doc1.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +51,7 @@ public class HomeFragment extends Fragment {
                Toast.makeText(getActivity(),"You clicked second button",Toast.LENGTH_SHORT).show();
            }
        });
+
 
 
 
