@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         img = findViewById(R.id.img);
         imageView = findViewById(R.id.civ_img);
-        imageView.setGifImageResource(R.drawable.splash);
+        imageView.setGifImageResource(R.drawable.splash_gif);
         SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
         String strEmail = sharedPreferences.getString("KEY_PREF_EMAIL", "");
 
