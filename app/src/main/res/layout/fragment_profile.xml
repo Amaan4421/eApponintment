@@ -9,25 +9,171 @@
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:paddingRight="16dp"
-    android:paddingBottom="16dp">
+    android:paddingBottom="16dp"
+    android:layout_marginTop="?attr/actionBarSize">
 
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
-        android:layout_width="119dp"
+        android:layout_width="110dp"
         android:layout_height="114dp"
         android:paddingTop="10dp"
-        android:src="@drawable/applogo" />
-
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_baseline_account_circle" />
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="25dp"
+        android:text="Hello"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="25dp"
+        android:text="Email:"
+        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="15dp"
         android:text="Hello"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_marginTop="15dp"
+        android:text="Username:"
+        android:textSize="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text3"
+        android:layout_marginTop="15dp"
+        android:text="Mobile Number:"
+        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/text4_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text3"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="150dp"
+        android:text="Hello"
+        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text4"
+        android:layout_marginTop="15dp"
+        android:text="Date of Birth:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/text5_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text4"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="5dp"
+        android:imeOptions="actionDone"
+        android:hint="Enter your Birth-Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColorHint="#90000000"
+        android:textSize="20dp"/>
+
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text5"
+        android:layout_marginTop="15dp"
+        android:text="Blood Group:"
+        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <EditText
+        android:id="@+id/text6_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text5"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="120dp"
+        android:hint="Enter your Blood group"
+        android:imeOptions="actionDone"
+        android:textColorHint="#90000000"
+        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <android.widget.Button
+        android:id="@+id/text7"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text6"
+        android:text="Show Appointments"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_bg"
+        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <android.widget.Button
+        android:id="@+id/text8"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text7"
+        android:text="Change Password"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_bg"
+        android:textSize="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <android.widget.Button
+        android:id="@+id/save"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+        android:padding="15dp"
+        android:text="Save Changes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
 
 
 </RelativeLayout>

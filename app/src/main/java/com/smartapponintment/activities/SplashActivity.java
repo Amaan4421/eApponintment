@@ -1,15 +1,15 @@
 package com.smartapponintment.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 
-import com.smartapponintment.utils.GifImageView;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.smartapponintment.R;
+import com.smartapponintment.utils.GifImageView;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -37,7 +37,7 @@ public class SplashActivity extends AppCompatActivity {
                     finish();
 
                 }else {
-                    Intent i = new Intent(SplashActivity.this,BottomDocActivity.class);
+                    Intent i = new Intent(SplashActivity.this,BottomNavActivity.class);
                     startActivity(i);
                     finish();
                 }
