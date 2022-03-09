@@ -8,5 +8,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom_doc">BottomDocActivity</string>
     <string name="title_activity_bottom_admin">BottomAdminActivity</string>
-
+    <string name="au">This is About us Card.</string>
+    <string name="cu">This is Contact us Card.</string>
 </resources>

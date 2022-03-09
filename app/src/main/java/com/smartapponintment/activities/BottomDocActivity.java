@@ -3,21 +3,16 @@ package com.smartapponintment.activities;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.smartapponintment.R;
-import com.smartapponintment.fragments.HomeFragment;
-import com.smartapponintment.fragments.ProfileFragment;
-import com.smartapponintment.fragments.SettingFragment;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.smartapponintment.R;
+import com.smartapponintment.fragments.ProfileFragment;
+import com.smartapponintment.fragments.SettingFragment;
 
 public class BottomDocActivity extends AppCompatActivity {
 
@@ -66,10 +61,10 @@ public class BottomDocActivity extends AppCompatActivity {
                 } else if (id == R.id.doc_profile) {
 
                     toolbar.setTitle("Profile");
-//                    fragment = new ProfileFragment();
-//                    fragmentTransaction.replace(R.id.frame, fragment);
-//                    fragmentTransaction.commit();
-//
+                    fragment = new ProfileFragment();
+                    fragmentTransaction.replace(R.id.frame, fragment);
+                    fragmentTransaction.commit();
+
 
                 } else if (id == R.id.doc_settings) {
 

@@ -1,21 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.SettingFragment"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_marginTop="?attr/actionBarSize">
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:id="@+id/btn_logout"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/app"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:src="@drawable/applogo"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/text1"
+        android:layout_below="@+id/app"
+        android:layout_marginTop="5dp"
+        android:text="eAppointment"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:textColor="#F60220"/>
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/text1"
+       android:layout_marginTop="25dp"
+       android:id="@+id/card1"
+       android:elevation="200dp"
+       app:cardCornerRadius="20dp"
+       android:background="@drawable/edt_bg">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/au"
+           android:text="About Us"
+           android:textSize="20dp"
+           android:layout_marginLeft="20dp"
+           android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+   </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card1"
+        android:layout_marginTop="15dp"
+        android:id="@+id/card2"
+        android:elevation="200dp"
+        app:cardCornerRadius="20dp"
+        android:background="@drawable/edt_bg">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cu"
+            android:text="Contact Us"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_logout"
+        android:layout_centerHorizontal="true"
+        android:text="v1.0.0"
+        android:textSize="15dp"/>
+
+    <android.widget.Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_logout"
         android:text="Logout"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/btn_bg"
         android:textColor="#fff"
         android:textAlignment="center" />
 
 
-</LinearLayout>
+</RelativeLayout>

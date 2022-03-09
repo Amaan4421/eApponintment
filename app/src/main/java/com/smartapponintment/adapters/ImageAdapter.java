@@ -14,11 +14,9 @@ import com.smartapponintment.fragments.HomeFragment;
 public class ImageAdapter extends PagerAdapter {
         HomeFragment mContext;
 
-        public ImageAdapter(HomeFragment context) {
-//            this.mContext = context;
+    public ImageAdapter(HomeFragment context) {
             this.mContext = context;
         }
-
 
     @Override
         public boolean isViewFromObject(View view, Object object) {
@@ -35,17 +33,22 @@ public class ImageAdapter extends PagerAdapter {
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setImageResource(sliderImageId[position]);
             ((ViewPager) container).addView(imageView, 0);
+
+
             return imageView;
         }
 
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
+    @Override
+        public void destroyItem(ViewGroup container, int position, Object object)
+    {
             ((ViewPager) container).removeView((ImageView) object);
         }
 
         @Override
-        public int getCount() {
+        public int getCount()
+        {
             return sliderImageId.length;
         }
 
-    }
+
+}

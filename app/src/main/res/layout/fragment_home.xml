@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/edt_bg"
         android:gravity="center"
         android:padding="20dp"
     tools:context=".fragments.HomeFragment"
@@ -22,16 +21,14 @@
     android:layout_height="wrap_content"
     android:layout_below="@+id/viewPage">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card1"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginTop="50dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="100dp"
         android:background="#fff">
-
-
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img"
@@ -41,7 +38,6 @@
             android:textAlignment="center"
             app:civ_border_color="@color/black"
             app:civ_border_width="3dp" />
-
 
         <Button
             android:id="@+id/doc_1"
@@ -53,8 +49,8 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginLeft="150dp"/>
-    </androidx.cardview.widget.CardView>
 
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_height="wrap_content"
@@ -73,8 +69,6 @@
             app:civ_border_color="@color/black"
             app:civ_border_width="3dp" />
 
-
-
         <Button
             android:id="@+id/doc_2"
             android:layout_width="wrap_content"
@@ -87,6 +81,8 @@
             android:layout_marginLeft="150dp"/>
 
     </androidx.cardview.widget.CardView>
-</RelativeLayout>
+
+    </RelativeLayout>
+
 </RelativeLayout>
 
