@@ -28,7 +28,7 @@
 
    <androidx.cardview.widget.CardView
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
+       android:layout_height="40dp"
        android:layout_below="@id/text1"
        android:layout_marginTop="25dp"
        android:id="@+id/card1"
@@ -41,6 +41,7 @@
            android:layout_height="wrap_content"
            android:id="@+id/au"
            android:text="About Us"
+           android:layout_marginTop="5dp"
            android:textSize="20dp"
            android:layout_marginLeft="20dp"
            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"/>
@@ -49,7 +50,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/card1"
         android:layout_marginTop="15dp"
         android:id="@+id/card2"
@@ -62,6 +63,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/cu"
             android:text="Contact Us"
+            android:layout_marginTop="5dp"
             android:textSize="20dp"
             android:layout_marginLeft="20dp"
             android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24" />

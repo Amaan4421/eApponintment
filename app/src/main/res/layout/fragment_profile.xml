@@ -4,13 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.ProfileFragment"
-    android:orientation="horizontal"
-    android:gravity="top"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:paddingRight="16dp"
-    android:paddingBottom="16dp"
     android:layout_marginTop="?attr/actionBarSize">
 
 
@@ -23,25 +19,25 @@
         android:src="@drawable/ic_baseline_account_circle" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/imageView"
-        android:layout_marginTop="25dp"
-        android:id="@+id/card1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_bg"
         android:elevation="200dp"
-        app:cardCornerRadius="20dp"
-        android:background="@drawable/edt_bg">
+        app:cardCornerRadius="20dp">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/card1"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="5dp"
-        android:text="Hello"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20dp" />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card1"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="5dp"
+            android:text="Hello"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
 
 
         <TextView
@@ -49,9 +45,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
-            android:text="Email:"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
+            android:text="Email:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
 
@@ -62,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/card1"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/edt_bg"
         android:elevation="200dp"
         app:cardCornerRadius="20dp"
@@ -73,9 +69,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text1"
-            android:text="Username:"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
+            android:text="Username:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
 
@@ -85,8 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/text1"
             android:layout_marginLeft="110dp"
-            android:text="Hello"
             android:layout_marginTop="5dp"
+            android:text="Hello"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
 
@@ -97,7 +93,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/card2"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/edt_bg"
         android:elevation="200dp"
         app:cardCornerRadius="20dp">
@@ -107,9 +103,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text2"
-            android:text="Mobile Number:"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
+            android:text="Mobile Number:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
 
@@ -131,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/card3"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/edt_bg"
         android:elevation="200dp"
         app:cardCornerRadius="20dp">
@@ -141,9 +137,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text3"
-            android:text="Date of Birth:"
             android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
+            android:text="Date of Birth:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
 
@@ -152,7 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text3"
-            android:layout_marginLeft="125dp"
+            android:layout_marginLeft="130dp"
             android:imeOptions="actionDone"
             android:text="Enter your Birth-Date"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -164,7 +160,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/card4"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/card5"
         android:elevation="200dp"
         app:cardCornerRadius="20dp"
@@ -196,39 +192,40 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/card5"
-        android:layout_marginTop="10dp"
-        android:id="@+id/card6"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edt_bg"
         android:elevation="200dp"
-        app:cardCornerRadius="20dp"
-        android:background="@drawable/edt_bg">
+        app:cardCornerRadius="20dp">
 
-    <TextView
-        android:id="@+id/text6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text5"
-        android:text="Address:"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:textSize="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text5"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="Address:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/text6_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text5"
-        android:layout_marginLeft="90dp"
-        android:text="Enter your Address"
-        android:imeOptions="actionDone"
-        android:textColorHint="#90000000"
-        android:textSize="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        <EditText
+            android:id="@+id/text6_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text5"
+            android:layout_marginLeft="90dp"
+            android:imeOptions="actionDone"
+            android:text="Enter your Address"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColorHint="#90000000"
+            android:textSize="20dp" />
 
     </androidx.cardview.widget.CardView>
+
 
 <!--    <android.widget.Button-->
 <!--        android:id="@+id/text7"-->
@@ -246,32 +243,30 @@
 
     <android.widget.Button
         android:id="@+id/text7"
-        android:layout_width="250dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/card6"
-        android:text="Change Password"
-        android:padding="15dp"
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_bg"
-        android:textSize="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-    <android.widget.Button
-        android:id="@+id/save"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text7"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_bg"
-        android:padding="15dp"
+        android:padding="5dp"
+        android:text="Change Password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <android.widget.Button
+        android:id="@+id/save"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_bg"
+        android:padding="5dp"
         android:text="Save Changes"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/white"
-        android:textSize="20dp" />
-
-
+        android:textSize="15dp" />
 
 </RelativeLayout>

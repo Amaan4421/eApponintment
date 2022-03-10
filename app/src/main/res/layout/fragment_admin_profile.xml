@@ -17,25 +17,25 @@
         android:src="@drawable/ic_baseline_account_circle" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
-        android:layout_marginTop="25dp"
         android:id="@+id/card1"
-        android:elevation="400dp"
-        app:cardCornerRadius="20dp"
-        android:background="@drawable/edt_bg">
-
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_below="@id/imageView"
-        android:layout_marginLeft="120dp"
         android:layout_marginTop="25dp"
-        android:text="Admin"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="20dp" />
+        android:background="@drawable/edt_bg"
+        android:elevation="400dp"
+        app:cardCornerRadius="20dp">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
+            android:text="Admin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20dp" />
 
 
         <TextView
@@ -43,8 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
-            android:layout_marginTop="25dp"
             android:paddingLeft="15dp"
+            android:layout_marginTop="5dp"
             android:text="Username:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
@@ -53,7 +53,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/card1"
         android:layout_marginTop="25dp"
         android:id="@+id/card2"
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text1"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:paddingLeft="15dp"
             android:text="Email:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/text1"
             android:layout_marginLeft="85dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:text="admin27@gmail.com"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
