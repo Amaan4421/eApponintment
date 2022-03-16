@@ -52,8 +52,5 @@ public class HomeFragment extends Fragment {
         });
         return rootview;
     }
-
-    private class SliderItem {
-    }
 }
 

@@ -8,16 +8,15 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.smartapponintment.R;
-import com.smartapponintment.fragments.HomeFragment;
+import com.smartapponintment.fragments.HomeDocFragment;
 
 
-public class ImageAdapter extends PagerAdapter {
-        HomeFragment mContext;
+public class ImageAdapter2 extends PagerAdapter {
+        HomeDocFragment cContext;
 
-    public ImageAdapter(HomeFragment context) {
-        this.mContext = context;
+    public ImageAdapter2(HomeDocFragment homeDocFragment) {
+        this.cContext = homeDocFragment;
     }
-
 
 
     @Override
@@ -31,7 +30,7 @@ public class ImageAdapter extends PagerAdapter {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            ImageView imageView = new ImageView(mContext.getContext());
+            ImageView imageView = new ImageView(cContext.getContext());
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setImageResource(sliderImageId[position]);
             ((ViewPager) container).addView(imageView, 0);
