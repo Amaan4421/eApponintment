@@ -42,6 +42,27 @@
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.11200000000000002" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/drawable/btn_bg.xml" value="0.194" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/drawable/edt_bg.xml" value="0.194" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/drawable/ic_baseline_account_circle.xml" value="0.194" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.1255" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/drawable/ic_baseline_settings.xml" value="0.194" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.194" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/activity_bottom_admin.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/activity_bottom_doc.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/activity_bottom_nav.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/activity_login.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/activity_main.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/activity_splash.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/fragment_admin_profile.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/fragment_doc_home.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/fragment_doctor_home.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/fragment_home.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/fragment_profile.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/fragment_setting.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/layout/raw_au.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/menu/bottom_nav_admin.xml" value="0.203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/eApponintment/app/src/main/res/menu/bottom_nav_doc.xml" value="0.203125" />
       </map>
     </option>
   </component>
