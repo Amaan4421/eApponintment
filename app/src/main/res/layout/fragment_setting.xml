@@ -80,15 +80,15 @@
         android:textSize="15dp"/>
 
     <android.widget.Button
+        android:id="@+id/btn_logout"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_logout"
-        android:text="Logout"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:background="@drawable/btn_bg"
-        android:textColor="#fff"
-        android:textAlignment="center" />
+        android:text="Logout"
+        android:textAlignment="center"
+        android:textColor="#fff" />
 
 </RelativeLayout>

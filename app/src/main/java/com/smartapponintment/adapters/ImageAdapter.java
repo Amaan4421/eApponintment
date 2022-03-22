@@ -8,6 +8,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.smartapponintment.R;
+import com.smartapponintment.fragments.DoctorHomeFragment;
 import com.smartapponintment.fragments.HomeFragment;
 
 
@@ -19,6 +20,9 @@ public class ImageAdapter extends PagerAdapter {
     }
 
 
+
+    public ImageAdapter(DoctorHomeFragment docHomeFragment) {
+    }
 
     @Override
         public boolean isViewFromObject(View view, Object object) {

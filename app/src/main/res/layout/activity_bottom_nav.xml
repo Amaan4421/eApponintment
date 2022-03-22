@@ -29,6 +29,4 @@
         app:itemTextColor="#fff"
         app:itemIconTint="#fff"
         android:layout_alignParentBottom="true" />
-
-
 </RelativeLayout>

@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
 
 
         ViewPager mViewPager = rootview.findViewById(R.id.viewPage);
-        ImageAdapter adapterView = new ImageAdapter(this);
+        ImageAdapter adapterView = new ImageAdapter (this);
         mViewPager.setAdapter(adapterView);
 
 
