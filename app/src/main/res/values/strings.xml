@@ -10,4 +10,6 @@
     <string name="title_activity_bottom_admin">BottomAdminActivity</string>
     <string name="au">This is About us Card.</string>
     <string name="cu">This is Contact us Card.</string>
+    <string name="admin">An Admin can add doctor as well as can delete doctors profile.<br>Admin can manage users too.</br></string>
+    <string name="admin1"><u>click on admin panel button</u></string>
 </resources>

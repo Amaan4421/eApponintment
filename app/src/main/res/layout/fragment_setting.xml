@@ -12,8 +12,8 @@
         android:id="@+id/app"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:src="@drawable/applogo"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:src="@drawable/applogo" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,6 +88,5 @@
         android:background="@drawable/btn_bg"
         android:textColor="#fff"
         android:textAlignment="center" />
-
 
 </RelativeLayout>
