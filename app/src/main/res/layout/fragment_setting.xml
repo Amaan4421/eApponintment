@@ -5,13 +5,15 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.SettingFragment"
-    android:layout_marginTop="?attr/actionBarSize">
+    android:layout_marginTop="?attr/actionBarSize"
+    android:background="#C1BFBF">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/app"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:src="@drawable/applogo" />
 
