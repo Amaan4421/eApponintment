@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddDoctorFragment"
+    android:background="#C1BFBF"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Admin Panel(Add Hospital)"
+        android:textSize="30dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h1"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:text="Hospital Name:"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/h3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h1"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Hospital name"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/h4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h2"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="Hospital Number:"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h2"
+        android:layout_marginLeft="130dp"
+        android:hint="Enter Hospital Number"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/t6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h4"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="Hospital Email:"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/t7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h4"
+        android:layout_marginLeft="120dp"
+        android:hint="Hospital Email"
+        android:inputType="number"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/t8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t6"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="Hospital Address:"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Hospital Address"
+        android:id="@+id/t9"
+        android:textSize="15dp"
+        android:layout_below="@+id/t6"
+        android:layout_marginLeft="130dp"/>
+
+
+    <android.widget.Button
+        android:id="@+id/addHospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+        android:padding="5dp"
+        android:text="Add"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>
