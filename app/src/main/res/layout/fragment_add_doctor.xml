@@ -8,12 +8,12 @@
     android:layout_marginTop="?attr/actionBarSize">
 
     <TextView
+        android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Admin Panel(Add Doctor)"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp"
-        android:id="@+id/t1"/>
+        android:text="Admin Panel(Add Doctor)"
+        android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -138,6 +138,7 @@
         android:layout_below="@+id/t12"
         android:layout_marginTop="20dp"
         android:text="Add"
+        android:textSize="20dp"
         android:background="@drawable/btn_bg"
         android:layout_centerHorizontal="true"
         android:padding="5dp"/>
