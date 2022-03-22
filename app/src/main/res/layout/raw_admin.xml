@@ -27,10 +27,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="35dp"
-            android:elevation="200dp"
+            android:layout_marginTop="30dp"
             app:cardBackgroundColor="#FB0303"
-            app:cardUseCompatPadding="true">
+            app:cardCornerRadius="20dp"
+            app:cardElevation="100dp">
 
             <TextView
                 android:id="@+id/add2"
@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Add Doctor"
+                android:padding="10dp"
                 android:textColor="#ffffff"
                 android:textSize="15dp" />
 
@@ -61,11 +62,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="30dp"
             android:elevation="200dp"
             android:id="@+id/c2"
             app:cardBackgroundColor="#FB0303"
-            app:cardUseCompatPadding="true">
+            app:cardCornerRadius="20dp"
+            app:cardElevation="100dp">
 
             <TextView
                 android:id="@+id/delete2"
@@ -73,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Delete Doctor"
+                android:padding="10dp"
                 android:textColor="#ffffff"
                 android:textSize="15dp" />
 
@@ -94,20 +97,21 @@
             android:src="@drawable/ic_baseline_account_circle"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/c3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="35dp"
-            android:id="@+id/c3"
-            android:elevation="200dp"
+            android:layout_marginTop="30dp"
             app:cardBackgroundColor="#FB0303"
-            app:cardUseCompatPadding="true">
+            app:cardCornerRadius="20dp"
+            app:cardElevation="100dp">
 
             <TextView
                 android:id="@+id/user2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:padding="10dp"
                 android:text="Show Patients"
                 android:textColor="#ffffff"
                 android:textSize="15dp" />
@@ -133,11 +137,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="30dp"
             android:elevation="200dp"
             android:id="@+id/c4"
             app:cardBackgroundColor="#FB0303"
-            app:cardUseCompatPadding="true">
+            app:cardCornerRadius="20dp"
+            app:cardElevation="100dp">
 
             <TextView
                 android:id="@+id/hosp2"
@@ -146,6 +151,7 @@
                 android:layout_gravity="center"
                 android:text="Add Hospital"
                 android:textColor="#ffffff"
+                android:padding="10dp"
                 android:textSize="15dp" />
 
         </androidx.cardview.widget.CardView>
