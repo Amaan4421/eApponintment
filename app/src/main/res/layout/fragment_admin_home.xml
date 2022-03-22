@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#C1BFBF"
     tools:context=".fragments.AdminHomeFragment"
     android:layout_marginTop="?attr/actionBarSize">
 
@@ -31,7 +32,8 @@
         android:id="@+id/card"
         android:layout_marginTop="200dp"
         android:elevation="200dp"
-        app:cardBackgroundColor="#DAF4394F">
+        app:cardBackgroundColor="#DAF4394F"
+        app:cardCornerRadius="30dp">
 
         <TextView
             android:layout_width="match_parent"
