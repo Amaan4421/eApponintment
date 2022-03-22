@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DeleteDoctorFragment"
+    android:background="#C1BFBF"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/id1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Admin Panel(Delete Doctor)"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospital Name:"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/id1"
+        android:id="@+id/id2"
+        android:textSize="15dp"
+        android:paddingLeft="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Hospital Name"
+        android:layout_marginTop="20dp"
+        android:id="@+id/e1"
+        android:layout_below="@id/id1"
+        android:layout_marginLeft="120dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="Doctor Name:"
+        android:layout_below="@+id/id2"
+        android:id="@+id/id3"
+        android:textSize="15dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Doctor Name"
+        android:layout_below="@id/id2"
+        android:id="@+id/e2"
+        android:layout_marginLeft="120dp"
+        android:textSize="15dp" />
+
+    <android.widget.Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/id3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
+        android:text="Delete"
+        android:textSize="20dp" />
+
+</RelativeLayout>

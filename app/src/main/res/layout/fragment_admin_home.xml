@@ -11,11 +11,11 @@
 
 
     <ImageView
+        android:id="@id/app"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_centerHorizontal="true"
-        android:id="@id/app"
-        android:src="@drawable/applogo"/>
+        android:src="@drawable/applogo" />
 
     <TextView
         android:layout_width="wrap_content"
