@@ -10,7 +10,6 @@
     android:orientation="vertical"
     android:padding="30dp">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,10 +23,11 @@
             android:src="@drawable/ic_baseline_add_circle_24"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/c1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="35dp"
             android:elevation="200dp"
             app:cardBackgroundColor="#FB0303"
             app:cardUseCompatPadding="true">
@@ -39,7 +39,7 @@
                 android:layout_gravity="center"
                 android:text="Add Doctor"
                 android:textColor="#ffffff"
-                android:textSize="25dp" />
+                android:textSize="15dp" />
 
         </androidx.cardview.widget.CardView>
 
@@ -61,19 +61,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="35dp"
             android:elevation="200dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="#FB0303">
+            android:id="@+id/c2"
+            app:cardBackgroundColor="#FB0303"
+            app:cardUseCompatPadding="true">
 
             <TextView
                 android:id="@+id/delete2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textColor="#ffffff"
                 android:text="Delete Doctor"
-                android:textSize="25dp"/>
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
 
         </androidx.cardview.widget.CardView>
 
@@ -96,19 +97,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="120dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="35dp"
+            android:id="@+id/c3"
             android:elevation="200dp"
-            app:cardUseCompatPadding="true"
-            app:cardBackgroundColor="#FB0303">
+            app:cardBackgroundColor="#FB0303"
+            app:cardUseCompatPadding="true">
 
             <TextView
                 android:id="@+id/user2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textColor="#ffffff"
                 android:text="Show Patients"
-                android:textSize="25dp"/>
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:id="@+id/r4">
+
+        <ImageView
+            android:id="@+id/hosp1"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_baseline_home_work_24"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="35dp"
+            android:elevation="200dp"
+            android:id="@+id/c4"
+            app:cardBackgroundColor="#FB0303"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/hosp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add Hospital"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
 
         </androidx.cardview.widget.CardView>
 

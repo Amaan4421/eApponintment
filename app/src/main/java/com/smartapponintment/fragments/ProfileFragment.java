@@ -71,7 +71,6 @@ public class ProfileFragment extends Fragment {
                                                 {
                                                         alertDialog.dismiss();
                                                 }
-
                                                 Intent j = new Intent();
                                                 j.setType("image/*");
                                                 j.setAction(Intent.ACTION_PICK);
