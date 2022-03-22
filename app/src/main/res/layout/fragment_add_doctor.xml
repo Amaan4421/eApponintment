@@ -13,27 +13,31 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Admin Panel(Add Doctor)"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:textColor="#000000"/>
 
     <TextView
+        android:id="@+id/t2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Doctor Name:"
-        android:id="@+id/t2"
         android:layout_below="@+id/t1"
         android:layout_marginTop="30dp"
-        android:textSize="15dp"
-        android:paddingLeft="10dp"/>
+        android:paddingLeft="10dp"
+        android:text="Doctor Name:"
+        android:textColor="#000000"
+        android:textSize="25dp" />
 
     <EditText
+        android:id="@+id/t3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter Doctor name"
-        android:id="@+id/t3"
-        android:textSize="15dp"
-        android:layout_marginTop="20dp"
         android:layout_below="@+id/t1"
-        android:layout_marginLeft="100dp"/>
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="20dp"
+        android:singleLine="true"
+        android:hint="Enter Doctor name"
+        android:textColor="#000000"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -43,16 +47,19 @@
         android:layout_below="@+id/t2"
         android:paddingLeft="10dp"
         android:layout_marginTop="10dp"
-        android:textSize="15dp"/>
+        android:textSize="25dp"
+        android:textColor="#000000"/>
 
     <EditText
+        android:id="@+id/t5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Designation name"
-        android:id="@+id/t5"
-        android:textSize="15dp"
         android:layout_below="@+id/t2"
-        android:layout_marginLeft="100dp"/>
+        android:layout_marginLeft="150dp"
+        android:hint="Designation name"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="25dp" />
 
     <TextView
         android:id="@+id/t6"
@@ -62,17 +69,20 @@
         android:layout_marginTop="10dp"
         android:paddingLeft="10dp"
         android:text="Doctor Number:"
-        android:textSize="15dp" />
+        android:textSize="25dp"
+        android:textColor="#000000"/>
 
     <EditText
         android:id="@+id/t7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/t4"
-        android:layout_marginLeft="120dp"
+        android:layout_marginLeft="190dp"
         android:hint="Mobile Number"
+        android:singleLine="true"
         android:inputType="number"
-        android:textSize="15dp" />
+        android:textSize="25dp"
+        android:textColor="#000000"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,17 +91,20 @@
         android:id="@+id/t8"
         android:layout_below="@+id/t6"
         android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:paddingLeft="10dp"/>
+        android:textSize="25dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000000"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Enter email"
         android:id="@+id/t9"
-        android:textSize="15dp"
+        android:textSize="25dp"
+        android:singleLine="true"
         android:layout_below="@+id/t6"
-        android:layout_marginLeft="100dp"/>
+        android:layout_marginLeft="160dp"
+        android:textColor="#000000"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -100,47 +113,54 @@
         android:id="@+id/t10"
         android:layout_below="@+id/t8"
         android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:paddingLeft="10dp"/>
+        android:textSize="25dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000000"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Enter Address"
         android:id="@+id/t11"
-        android:textSize="15dp"
+        android:textSize="25dp"
+        android:singleLine="true"
         android:layout_below="@+id/t8"
-        android:layout_marginLeft="120dp"/>
+        android:layout_marginLeft="190dp"
+        android:textColor="#000000"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Doctor's Hospital Name:"
+        android:text="Hospital Name:"
         android:id="@+id/t12"
         android:layout_below="@+id/t10"
         android:layout_marginTop="10dp"
-        android:textSize="15dp"
-        android:paddingLeft="10dp"/>
+        android:textSize="25dp"
+        android:paddingLeft="10dp"
+        android:textColor="#000000"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Hospital Name"
         android:id="@+id/t13"
-        android:textSize="15dp"
+        android:textSize="25dp"
+        android:singleLine="true"
         android:layout_below="@+id/t10"
-        android:layout_marginLeft="170dp"/>
+        android:layout_marginLeft="180dp"
+        android:textColor="#000000"/>
 
     <android.widget.Button
+        android:id="@+id/addDoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/addDoc"
         android:layout_below="@+id/t12"
-        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
+        android:padding="5dp"
         android:text="Add"
         android:textSize="20dp"
-        android:background="@drawable/btn_bg"
-        android:layout_centerHorizontal="true"
-        android:padding="5dp"/>
+        android:textColor="#000000"/>
 
 </RelativeLayout>
