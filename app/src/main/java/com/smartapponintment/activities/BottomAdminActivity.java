@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.smartapponintment.R;
+import com.smartapponintment.fragments.AdminHomeFragment;
 import com.smartapponintment.fragments.AdminProfileFragment;
 
 public class BottomAdminActivity extends AppCompatActivity {
@@ -27,10 +28,10 @@ public class BottomAdminActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-//        getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.frame, new HomeFragment())
-//                .commit();
-//        toolbar.setTitle("Home");
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame, new AdminHomeFragment())
+                .commit();
+        toolbar.setTitle("Home");
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -43,9 +44,9 @@ public class BottomAdminActivity extends AppCompatActivity {
 
                 if (id == R.id.ad_home) {
 
-//                    fragment = new HomeFragment();
-//                    fragmentTransaction.replace(R.id.frame,fragment);
-//                    fragmentTransaction.commit();
+                    fragment = new AdminHomeFragment();
+                    fragmentTransaction.replace(R.id.frame,fragment);
+                    fragmentTransaction.commit();
                     toolbar.setTitle("Home");
 
                 }
