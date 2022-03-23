@@ -33,10 +33,13 @@ public class AdminHomeFragment extends Fragment {
                 LayoutInflater layoutInflater = (LayoutInflater)getLayoutInflater();
                 View tvAdmin = layoutInflater.inflate(R.layout.raw_admin,null);
                 TextView add2 = tvAdmin.findViewById(R.id.add2);
+                TextView delete2 = tvAdmin.findViewById(R.id.delete2);
+                TextView hosp2 = tvAdmin.findViewById(R.id.hosp2);
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 AlertDialog alertDialog = builder.create();
                 alertDialog.setView(tvAdmin);
                 alertDialog.show();
+
                 add2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -53,8 +56,37 @@ public class AdminHomeFragment extends Fragment {
                     }
                 });
 
+                delete2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
+                        if (alertDialog.isShowing())
+                        {
+                            alertDialog.dismiss();
+                        }
+                        Fragment fragment = null;
+                        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                        fragment = new DeleteDoctorFragment();
+                        fragmentTransaction.replace(R.id.frame,fragment);
+                        fragmentTransaction.commit();
+                    }
+                });
 
+                hosp2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        if (alertDialog.isShowing())
+                        {
+                            alertDialog.dismiss();
+                        }
+                        Fragment fragment = null;
+                        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                        fragment = new AddHospitalFragment();
+                        fragmentTransaction.replace(R.id.frame,fragment);
+                        fragmentTransaction.commit();
+                    }
+                });
 
             }
         });
