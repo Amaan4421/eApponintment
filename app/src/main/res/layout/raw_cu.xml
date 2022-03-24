@@ -15,13 +15,15 @@
         android:textColor="#0C0C0C"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text"
         android:layout_below="@+id/cu"
         android:text="@string/cu"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:textColor="#130F0F"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"/>
+        android:layout_marginLeft="20dp"/>
 
 </RelativeLayout>

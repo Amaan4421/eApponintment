@@ -8,8 +8,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom_doc">BottomDocActivity</string>
     <string name="title_activity_bottom_admin">BottomAdminActivity</string>
-    <string name="au">This is About us Card.</string>
-    <string name="cu">This is Contact us Card.</string>
+    <string name="au">->Our application make ways easy for booking doctors appointment.
+        \n->All kind of doctors are available for you through this application.
+        \n->We are thankful to you and doctors who are using this application.
+        \n->We are available for you 24/7.</string>
+    <string name="cu">Mobile Number:+919327851664
+    \nEmail:eAppointment501@gmail.com</string>
     <string name="admin">An Admin can add doctor as well as can delete doctors profile.\nAdmin can manage users too.\nAdmin can add hospital as well.</string>
     <string name="admin1"><u>click on admin panel button</u></string>
 </resources>

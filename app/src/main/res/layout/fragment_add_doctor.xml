@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.AddDoctorFragment"
     android:background="#C1BFBF"
     android:layout_marginTop="?attr/actionBarSize">
@@ -12,155 +13,241 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:text="Admin Panel(Add Doctor)"
+        android:textColor="#000000"
         android:textSize="30dp"
-        android:textColor="#000000"/>
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/t2"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/t1"
-        android:layout_marginTop="30dp"
-        android:paddingLeft="10dp"
-        android:text="Doctor Name:"
-        android:textColor="#000000"
-        android:textSize="25dp" />
+        android:layout_below="@id/t1"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/edt_bg"
+        android:elevation="400dp"
+        app:cardBackgroundColor="#B2FB0303"
+        app:cardCornerRadius="20dp">
 
-    <EditText
-        android:id="@+id/t3"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t1"
+            android:padding="20dp"
+            android:text="Doctor Name:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t1"
+            android:layout_marginLeft="130dp"
+            android:hint="Enter Doctor name"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/t1"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="20dp"
-        android:singleLine="true"
-        android:hint="Enter Doctor name"
-        android:textColor="#000000"
-        android:textSize="25dp" />
+        android:layout_below="@id/card1"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_bg"
+        android:elevation="400dp"
+        app:cardBackgroundColor="#B2FB0303"
+        app:cardCornerRadius="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Designation:"
         android:id="@+id/t4"
+        android:textStyle="bold"
         android:layout_below="@+id/t2"
-        android:paddingLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"
+        android:padding="20dp"
+        android:textSize="20dp"
         android:textColor="#000000"/>
 
-    <EditText
-        android:id="@+id/t5"
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/t5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t2"
+            android:layout_marginLeft="120dp"
+            android:hint="Designation name"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/t2"
-        android:layout_marginLeft="150dp"
-        android:hint="Designation name"
-        android:singleLine="true"
-        android:textColor="#000000"
-        android:textSize="25dp" />
+        android:layout_below="@id/card2"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_bg"
+        android:elevation="400dp"
+        app:cardBackgroundColor="#B2FB0303"
+        app:cardCornerRadius="20dp">
 
     <TextView
         android:id="@+id/t6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/t4"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
+        android:padding="20dp"
         android:text="Doctor Number:"
-        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
         android:textColor="#000000"/>
 
-    <EditText
-        android:id="@+id/t7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/t4"
-        android:layout_marginLeft="190dp"
-        android:hint="Mobile Number"
-        android:singleLine="true"
-        android:inputType="number"
-        android:textSize="25dp"
-        android:textColor="#000000"/>
+        <EditText
+            android:id="@+id/t7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t4"
+            android:layout_marginLeft="150dp"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Doctor Email:"
-        android:id="@+id/t8"
-        android:layout_below="@+id/t6"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"
-        android:paddingLeft="10dp"
-        android:textColor="#000000"/>
+    </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter email"
-        android:id="@+id/t9"
-        android:textSize="25dp"
-        android:singleLine="true"
-        android:layout_below="@+id/t6"
-        android:layout_marginLeft="160dp"
-        android:textColor="#000000"/>
+        android:layout_below="@id/card3"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_bg"
+        android:elevation="400dp"
+        app:cardBackgroundColor="#B2FB0303"
+        app:cardCornerRadius="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Doctor Address:"
-        android:id="@+id/t10"
-        android:layout_below="@+id/t8"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"
-        android:paddingLeft="10dp"
-        android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/t8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t6"
+            android:padding="20dp"
+            android:text="Doctor Email:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/t9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t6"
+            android:layout_marginLeft="130dp"
+            android:hint="Enter email"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Address"
-        android:id="@+id/t11"
-        android:textSize="25dp"
-        android:singleLine="true"
-        android:layout_below="@+id/t8"
-        android:layout_marginLeft="190dp"
-        android:textColor="#000000"/>
+        android:layout_below="@id/card4"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_bg"
+        android:elevation="400dp"
+        app:cardBackgroundColor="#B2FB0303"
+        app:cardCornerRadius="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hospital Name:"
-        android:id="@+id/t12"
-        android:layout_below="@+id/t10"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"
-        android:paddingLeft="10dp"
+        android:id="@+id/t10"
+        android:textStyle="bold"
+        android:layout_below="@+id/t8"
+        android:textSize="20dp"
+        android:padding="20dp"
         android:textColor="#000000"/>
 
-    <EditText
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/t11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t8"
+            android:layout_marginLeft="150dp"
+            android:hint="Hospital Name"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card6"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Hospital Name"
-        android:id="@+id/t13"
-        android:textSize="25dp"
-        android:singleLine="true"
-        android:layout_below="@+id/t10"
-        android:layout_marginLeft="180dp"
-        android:textColor="#000000"/>
+        android:layout_below="@id/card5"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/edt_bg"
+        android:elevation="400dp"
+        app:cardBackgroundColor="#B2FB0303"
+        app:cardCornerRadius="20dp">
+
+        <TextView
+            android:id="@+id/t12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t10"
+            android:padding="20dp"
+            android:text="Speciality:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/t13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t10"
+            android:layout_marginLeft="100dp"
+            android:hint="Enter Speciality"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+    </androidx.cardview.widget.CardView>
 
     <android.widget.Button
         android:id="@+id/addDoc"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/t12"
+        android:layout_below="@+id/card6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:background="@drawable/btn_bg"
-        android:padding="5dp"
+        android:padding="20dp"
         android:text="Add"
-        android:textSize="20dp"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
