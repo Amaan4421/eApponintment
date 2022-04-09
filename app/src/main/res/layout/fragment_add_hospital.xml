@@ -39,7 +39,7 @@
         android:text="Hospital Name:"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="#ffffff"/>
 
     <EditText
         android:id="@+id/h3"
@@ -49,7 +49,8 @@
         android:layout_marginLeft="150dp"
         android:padding="20dp"
         android:hint="Enter Hospital name"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textColor="#ffffff"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -73,7 +74,7 @@
         android:text="Hospital Number:"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="#ffffff"/>
 
     <EditText
         android:id="@+id/t5"
@@ -84,7 +85,8 @@
         android:inputType="number"
         android:padding="20dp"
         android:hint="Enter Hospital Number"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textColor="#ffffff"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -108,7 +110,7 @@
         android:text="Hospital Email:"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="#ffffff"/>
 
     <EditText
         android:id="@+id/t7"
@@ -119,7 +121,8 @@
         android:layout_marginLeft="140dp"
         android:hint="Hospital Email"
         android:inputType="textEmailAddress"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textColor="#ffffff"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -140,10 +143,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/t6"
         android:padding="20dp"
+        android:layout_marginTop="10dp"
         android:text="Hospital Address:"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:textColor="#ffffff"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -152,6 +156,7 @@
         android:id="@+id/t9"
         android:textSize="20dp"
         android:padding="20dp"
+        android:textColor="#ffffff"
         android:layout_below="@+id/t6"
         android:layout_marginLeft="170dp"/>
 
@@ -165,10 +170,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_bg"
-        android:padding="20dp"
+        android:padding="15dp"
         android:text="Add"
-        android:textColor="@color/black"
+        android:textColor="#ffffff"
         android:textSize="30dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>

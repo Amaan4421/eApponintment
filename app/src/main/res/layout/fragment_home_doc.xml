@@ -16,6 +16,35 @@
         android:layout_width="match_parent"
         android:layout_height="250dp" />
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/s1"
+        android:layout_below="@id/viewPage"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card1"
+            app:cardBackgroundColor="#ADF3EFEF"
+            app:cardCornerRadius="30dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/dochome"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+
 
 </RelativeLayout>
 

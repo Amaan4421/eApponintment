@@ -10,17 +10,34 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt_email"
+        android:id="@+id/edt_fp"
         android:padding="20dp"
-        android:hint="Enter your email"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:hint="Enter your new password"
         android:textColorHint="#660E0606"
         android:background="@drawable/edt_bg"/>
 
-    <Button
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_fp2"
+        android:padding="20dp"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="20dp"
+        android:hint="Re-enter your new password"
+        android:textColorHint="#660E0606"
+        android:background="@drawable/edt_bg"/>
+
+    <android.widget.Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_submit"
         android:text="Submit"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_bg"/>
 

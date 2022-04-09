@@ -35,6 +35,7 @@ public class AdminHomeFragment extends Fragment {
                 TextView add2 = tvAdmin.findViewById(R.id.add2);
                 TextView delete2 = tvAdmin.findViewById(R.id.delete2);
                 TextView hosp2 = tvAdmin.findViewById(R.id.hosp2);
+                TextView user2 = tvAdmin.findViewById(R.id.user2);
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 AlertDialog alertDialog = builder.create();
                 alertDialog.setView(tvAdmin);
@@ -83,6 +84,22 @@ public class AdminHomeFragment extends Fragment {
                         Fragment fragment = null;
                         FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
                         fragment = new AddHospitalFragment();
+                        fragmentTransaction.replace(R.id.frame,fragment);
+                        fragmentTransaction.commit();
+                    }
+                });
+
+                user2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        if (alertDialog.isShowing())
+                        {
+                            alertDialog.dismiss();
+                        }
+                        Fragment fragment = null;
+                        FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                        fragment = new ShowUsersFragment();
                         fragmentTransaction.replace(R.id.frame,fragment);
                         fragmentTransaction.commit();
                     }

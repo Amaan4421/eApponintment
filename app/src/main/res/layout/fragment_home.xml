@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
@@ -10,79 +9,232 @@
     tools:context=".fragments.HomeFragment"
     android:layout_marginTop="?attr/actionBarSize">
 
-
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPage"
         android:layout_width="match_parent"
         android:layout_height="250dp" />
 
-    <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/viewPage">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewPage"
+        android:text="Categories:"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hs1"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/text">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/l1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardElevation="300dp"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/img1"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_local_hospital_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t1"
+                android:textSize="20dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="Heart"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:cardElevation="300dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/teal_200">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/img2"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_local_hospital_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t2"
+                android:textSize="20dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Dental"
+                android:textStyle="bold"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:cardElevation="300dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/teal_200">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/img3"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_local_hospital_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t3"
+                android:textSize="20dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#000000"
+                android:text="Brain"
+                android:textStyle="bold"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:cardElevation="300dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/teal_200">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/img4"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_local_hospital_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t4"
+                android:textSize="20dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Ortho"
+                android:textStyle="bold"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:cardElevation="300dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/teal_200">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/img5"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_local_hospital_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t5"
+                android:textSize="20dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#000000"
+                android:text="Skin"
+                android:textStyle="bold"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:cardElevation="300dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/teal_200">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/img6"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t6"
+                android:textSize="20dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#000000"
+                android:text="More"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/s1"
+        android:layout_below="@id/hs1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp">
 
     <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/card1"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="100dp"
-        android:background="#fff">
+        app:cardBackgroundColor="#ADF3EFEF"
+        app:cardCornerRadius="30dp"
+        android:layout_marginTop="20dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img"
-            android:layout_width="104dp"
-            android:layout_height="70dp"
-            android:src="@drawable/applogo2"
-            android:textAlignment="center"
-            app:civ_border_color="@color/black"
-            app:civ_border_width="3dp" />
-
-        <Button
-            android:id="@+id/doc_1"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="Amaan"
-            android:textColor="#000"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="150dp"/>
+            android:padding="20dp"
+            android:text="@string/home"
+            android:textColor="#000000"
+            android:textSize="20dp" />
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/card1"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="100dp"
-        android:background="#000">
-
-    <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img2"
-            android:layout_width="104dp"
-            android:layout_height="70dp"
-            android:src="@drawable/applogo2"
-            android:textAlignment="center"
-            app:civ_border_color="@color/black"
-            app:civ_border_width="3dp" />
-
-        <Button
-            android:id="@+id/doc_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="Sajina"
-            android:textColor="#000"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="150dp"/>
-
-    </androidx.cardview.widget.CardView>
-
-    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
 

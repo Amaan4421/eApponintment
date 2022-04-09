@@ -8,12 +8,33 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom_doc">BottomDocActivity</string>
     <string name="title_activity_bottom_admin">BottomAdminActivity</string>
+
     <string name="au">->Our application make ways easy for booking doctors appointment.
         \n->All kind of doctors are available for you through this application.
-        \n->We are thankful to you and doctors who are using this application.
-        \n->We are available for you 24/7.</string>
+        \n->This application is  available for you 24/7.</string>
+
     <string name="cu">Mobile Number:+919327851664
     \nEmail:eAppointment501@gmail.com</string>
+
     <string name="admin">An Admin can add doctor as well as can delete doctors profile.\nAdmin can manage users too.\nAdmin can add hospital as well.</string>
+
     <string name="admin1"><u>click on admin panel button</u></string>
+
+    <string name="future">This feature will be available in future very soon.\nWe are working on it...</string>
+
+    <string name="home"><b>Welcome to our Application!!!</b>
+        \n\n<b>We are thankful to you for using our application.</b>
+        \n\nOur application provide a digital way to book doctors appointment and save your precious time.
+        \n\nFirstly, If you are a new user then we advice you to fill up the details on profile page.
+        \n\nYou can search and book your appointment on book appointment page besides this home page.
+        \n\nIf you have any problem regarding this application,you can sent message or email to us.
+        \n<b>Note:Contacts are available on setting page.</b></string>
+
+    <string name="dochome"><b>Welcome to our Application!!!</b>
+        \n\n<b>Our team appreciate the hard work and the other medical services done by all the doctors and frontline workers in the tough time of COVID-19.</b>
+        \n\n<b>The entire world are thankful to all the doctors and co-workers.</b>
+        \n\nFirstly, If you are a new user then we advice you to fill up the details on profile page.
+        \n\nIf you have any problem regarding this application,you can sent message or email to us.
+        \n<b>Note:Contacts are available on setting page.</b></string>
+
 </resources>

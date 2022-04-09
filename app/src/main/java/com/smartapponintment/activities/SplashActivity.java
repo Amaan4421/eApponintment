@@ -16,6 +16,7 @@ public class SplashActivity extends AppCompatActivity {
     int time = 2000;
     GifImageView imageView;
     ImageView img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,18 +31,19 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-
-                if (strEmail.equals("")){
+                if (strEmail.equals(""))
+                {
                     Intent i = new Intent(SplashActivity.this,MainActivity.class);
                     startActivity(i);
                     finish();
-
-                }else {
+                }
+                else
+                {
                     Intent i = new Intent(SplashActivity.this,BottomDocActivity.class);
                     startActivity(i);
                     finish();
                 }
-                           }
+            }
         },time);
     }
 }

@@ -10,7 +10,6 @@
     android:background="#C1BFBF"
     android:layout_marginTop="?attr/actionBarSize">
 
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
         android:layout_width="110dp"
@@ -22,7 +21,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_below="@id/imageView"
         android:layout_marginTop="20dp"
         android:background="@drawable/edt_bg"
@@ -35,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/card1"
             android:layout_marginLeft="70dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="Hello"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
@@ -46,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
             android:text="Email:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -57,7 +56,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_below="@id/card1"
         android:layout_marginTop="5dp"
         android:background="@drawable/edt_bg"
@@ -70,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text1"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
             android:text="Username:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -82,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/text1"
             android:layout_marginLeft="110dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="Hello"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
@@ -92,7 +91,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/card3"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_below="@id/card2"
         android:layout_marginTop="5dp"
         android:background="@drawable/edt_bg"
@@ -104,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text2"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
             android:text="Mobile Number:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -116,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/text2"
             android:layout_marginLeft="155dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:text="Hello"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
@@ -146,14 +145,24 @@
 
         <EditText
             android:id="@+id/text4_1"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/text3"
             android:layout_marginLeft="130dp"
             android:imeOptions="actionDone"
-            android:text="Enter your Birth-Date"
+            android:text="Birth-Date"
+            android:singleLine="true"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_calendar_month"
+            android:id="@+id/date"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="5dp"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -185,6 +194,7 @@
         android:layout_below="@id/text4"
         android:layout_marginLeft="125dp"
         android:text="Enter your Blood group"
+        android:singleLine="true"
         android:imeOptions="actionDone"
         android:textColorHint="#90000000"
         android:textSize="20dp"
@@ -221,26 +231,12 @@
             android:layout_marginLeft="90dp"
             android:imeOptions="actionDone"
             android:text="Enter your Address"
+            android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColorHint="#90000000"
             android:textSize="20dp" />
 
     </androidx.cardview.widget.CardView>
-
-
-<!--    <android.widget.Button-->
-<!--        android:id="@+id/text7"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/text6"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:background="@drawable/btn_bg"-->
-<!--        android:padding="15dp"-->
-<!--        android:text="Show Appointments"-->
-<!--        android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="20dp" />-->
 
     <android.widget.Button
         android:id="@+id/text7"
