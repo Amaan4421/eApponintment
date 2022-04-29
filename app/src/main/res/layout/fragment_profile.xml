@@ -16,7 +16,9 @@
         android:layout_height="114dp"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:src="@drawable/ic_baseline_account_circle" />
+        android:src="@drawable/ic_baseline_account_circle"
+        app:civ_border_color="#F60505"
+        app:civ_border_width="2dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
@@ -114,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text2"
-            android:layout_marginLeft="155dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginTop="10dp"
             android:text="Hello"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -145,10 +147,10 @@
 
         <EditText
             android:id="@+id/text4_1"
-            android:layout_width="200dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/text3"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="135dp"
             android:imeOptions="actionDone"
             android:text="Birth-Date"
             android:singleLine="true"
@@ -159,10 +161,10 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_calendar_month"
+            android:src="@drawable/ic_baseline_calendar_month_24"
             android:id="@+id/date"
             android:layout_marginLeft="320dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="10dp"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -239,31 +241,29 @@
     </androidx.cardview.widget.CardView>
 
     <android.widget.Button
-        android:id="@+id/text7"
+        android:id="@+id/CP"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/card6"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/btn_bg"
-        android:padding="5dp"
         android:text="Change Password"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/white"
-        android:textSize="15dp" />
+        android:textSize="20dp" />
 
     <android.widget.Button
         android:id="@+id/save"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text7"
+        android:layout_below="@id/CP"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_bg"
-        android:padding="5dp"
         android:text="Save Changes"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/white"
-        android:textSize="15dp" />
+        android:textSize="20dp" />
 
 </RelativeLayout>

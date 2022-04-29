@@ -95,7 +95,6 @@ public class AdminProfileFragment extends Fragment {
             }
 
         });
-
         return rootview;
     }
     @Override
@@ -106,13 +105,10 @@ public class AdminProfileFragment extends Fragment {
             Uri uri = data.getData();
             imageView.setImageURI(uri);
         }
-
         if(requestCode == 12){
             assert data != null;
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(bitmap);
         }
     }
-
-
 }

@@ -1,6 +1,5 @@
 package com.smartapponintment.activities;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,19 +36,13 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtPassword;
     TextView newAcc;
     TextView tvfp;
-    RadioGroup radioGroup;
-    RadioButton edtB1;
-    RadioButton edtB2;
-    RadioButton edtB3;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-    String  passwordPattern = "[A-Za-z]+[0-9]+";
     String emailAdmin = "admin27@gmail.com";
     String passAdmin = "admin273";
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,43 +58,51 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.edt_password2);
         newAcc = findViewById(R.id.new_acc);
         tvfp = findViewById(R.id.tv_fp);
-        radioGroup = findViewById(R.id.tv_rg);
-        edtB1 = findViewById(R.id.rb1);
-        edtB2 = findViewById(R.id.rb2);
-        edtB3 = findViewById(R.id.rb3);
 
         tvfp.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                String strEmail = edtEmail.getText().toString();
-                if (strEmail.equals("")) {
-                    edtEmail.setError("Enter the email first");
-                } else {
-                    LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                    View fpView = layoutInflater.inflate(R.layout.raw_fp, null);
-                    EditText edtFp = fpView.findViewById(R.id.edt_fp);
-                    EditText edtFp2 = fpView.findViewById(R.id.edt_fp2);
-                    Button btnSubmit = fpView.findViewById(R.id.btn_submit);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                    AlertDialog alertDialog = builder.create();
-                    alertDialog.setView(fpView);
-                    alertDialog.show();
-                    String strFp = edtFp.getText().toString();
-                    String strFp2 = edtFp2.getText().toString();
-                    btnSubmit.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            if (strFp.matches(passwordPattern)) {
-                                Toast.makeText(LoginActivity.this, "Password must contain atleast one number", Toast.LENGTH_SHORT).show();
-                            } else if (!strFp.matches(strFp2)) {
-                                Toast.makeText(LoginActivity.this, "Both passwords are must be same", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(LoginActivity.this, "Password changed!!!", Toast.LENGTH_SHORT).show();
-                            }
+
+                LayoutInflater layoutInflater = (LayoutInflater)getLayoutInflater();
+                View tvFp = layoutInflater.inflate(R.layout.raw_fp,null);
+                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.setView(tvFp);
+                alertDialog.show();
+                EditText edtFPEmail = tvFp.findViewById(R.id.edt_fp);
+                Button btnCP = tvFp.findViewById(R.id.btn_submit);
+
+                btnCP.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String strFPEmail = edtFPEmail.getText().toString();
+                        if(strFPEmail.equals(""))
+                        {
+                            Toast.makeText(LoginActivity.this,"Enter email",Toast.LENGTH_SHORT).show();
                         }
-                    });
-                }
+                        else
+                        {
+                            if(alertDialog.isShowing())
+                            {
+                                alertDialog.dismiss();
+                            }
+                            firebaseAuth.sendPasswordResetEmail(strFPEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful())
+                                    {
+                                        Toast.makeText(LoginActivity.this, "We have sent an email to your email id!!!", Toast.LENGTH_SHORT).show();
+                                    }
+                                    else
+                                    {
+                                        Toast.makeText(LoginActivity.this, "Server error!!!", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
             }
         });
 
@@ -112,35 +111,41 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String strEmail = edtEmail.getText().toString();
                 String strPassword = edtPassword.getText().toString();
-                String strB1 = edtB1.getText().toString();
-                String strB2 = edtB2.getText().toString();
-                String strB3 = edtB3.getText().toString();
 
-                if (!edtB1.isChecked() && !edtB2.isChecked() && !edtB3.isChecked()) {
-                    Toast.makeText(LoginActivity.this, "Select Doctor or Patient or Admin", Toast.LENGTH_SHORT).show();
-                } else if (strEmail.equals("")) {
+                if (strEmail.equals(""))
+                {
                     Toast.makeText(LoginActivity.this, "Enter Email id", Toast.LENGTH_SHORT).show();
-                } else if (!strEmail.matches(emailPattern)) {
+                }
+                else if (!strEmail.matches(emailPattern))
+                {
                     Toast.makeText(LoginActivity.this, "Enter valid Email id", Toast.LENGTH_SHORT).show();
-                } else if (strPassword.equals("")) {
+                }
+                else if (strPassword.equals(""))
+                {
                     Toast.makeText(LoginActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
-                } else {
-                    if (edtB1.isChecked()) {
-                        if (strEmail.equals(emailAdmin) && strPassword.equals(passAdmin)) {
-                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                        if (strEmail.equals(emailAdmin) && strPassword.equals(passAdmin))
+                        {
+                            Toast.makeText(LoginActivity.this, "Login Successful!!!", Toast.LENGTH_SHORT).show();
+                            SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("KEY_PREF_EMAIL",strEmail);
+                            editor.commit();
                             Intent i = new Intent(LoginActivity.this, BottomAdminActivity.class);
                             startActivity(i);
                             finish();
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Enter Valid email or password", Toast.LENGTH_SHORT).show();
                         }
-                    } else {
-                        firebaseAuth.signInWithEmailAndPassword(strEmail, strPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    String strUID = firebaseAuth.getUid();
-                                    databaseReference.child(strUID).addListenerForSingleValueEvent(new ValueEventListener() {
+                        else
+                        {
+                            firebaseAuth.signInWithEmailAndPassword(strEmail, strPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful())
+                                    {
+                                        String strUID = firebaseAuth.getUid();
+                                        databaseReference.child(strUID).addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                             RegisterModel registerModel = snapshot.getValue(RegisterModel.class);
@@ -150,7 +155,8 @@ public class LoginActivity extends AppCompatActivity {
                                             String loginDob = registerModel.getUser_DOB();
                                             String loginAddress = registerModel.getUser_Address();
                                             String loginBG = registerModel.getUser_BG();
-                                            String loginPassword = registerModel.getUser_password();
+                                            String loginUrl = registerModel.getUser_Url();
+                                            String loginRole = registerModel.getUser_Role();
                                             SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
                                             SharedPreferences.Editor editor = sharedPreferences.edit();
                                             editor.putString("KEY_USERID",strUID);
@@ -160,25 +166,31 @@ public class LoginActivity extends AppCompatActivity {
                                             editor.putString("KEY_PREF_DOB", loginDob);
                                             editor.putString("KEY_PREF_ADDRESS", loginAddress);
                                             editor.putString("KEY_PREF_BG", loginBG);
-                                            editor.putString("KEY_PREF_PASSWORD", loginPassword);
+                                            editor.putString("KEY_USERURL",loginUrl);
+                                            editor.putString("KEY_USERROLE",loginRole);
                                             editor.commit();
 
-                                            if (edtB3.isChecked()) {
+                                            if (loginRole.equals("Patient"))
+                                            {
+                                                Toast.makeText(LoginActivity.this,"Welcome "+loginName,Toast.LENGTH_LONG).show();
                                                 Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
                                                 startActivity(i);
                                                 finish();
-                                            } else {
+                                            }
+                                            if (loginRole.equals("Doctor"))
+                                            {
                                                 Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
                                                 startActivity(i);
                                                 finish();
                                             }
                                         }
-
                                         @Override
                                         public void onCancelled(@NonNull DatabaseError error) {
                                         }
                                     });
-                                } else {
+                                }
+                                else
+                                {
                                     Toast.makeText(LoginActivity.this, "Wrong Credentials!!!", Toast.LENGTH_SHORT).show();
                                 }
                             }

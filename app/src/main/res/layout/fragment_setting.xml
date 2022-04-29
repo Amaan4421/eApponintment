@@ -8,7 +8,6 @@
     android:layout_marginTop="?attr/actionBarSize"
     android:background="#C1BFBF">
 
-
     <ImageView
         android:id="@+id/app"
         android:layout_width="96dp"
@@ -28,31 +27,31 @@
         android:textSize="25dp"
         android:textColor="#F60220"/>
 
-   <androidx.cardview.widget.CardView
-       android:layout_width="match_parent"
-       android:layout_height="40dp"
-       android:layout_below="@id/text1"
-       android:layout_marginTop="25dp"
-       android:id="@+id/card1"
-       android:elevation="200dp"
-       app:cardCornerRadius="20dp"
-       android:background="@drawable/edt_bg">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/text1"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/edt_bg"
+        android:elevation="200dp"
+        app:cardCornerRadius="20dp">
 
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/au"
-           android:text="About Us"
-           android:layout_marginTop="5dp"
-           android:textSize="20dp"
-           android:layout_marginLeft="20dp"
-           android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+        <TextView
+            android:id="@+id/au"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:text="About Us"
+            android:textSize="20dp" />
 
-   </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_below="@id/card1"
         android:layout_marginTop="15dp"
         android:id="@+id/card2"
@@ -65,32 +64,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/cu"
             android:text="Contact Us"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:textSize="20dp"
             android:layout_marginLeft="20dp"
             android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@id/card2"
-        android:layout_marginTop="15dp"
-        android:id="@+id/card3"
-        android:elevation="200dp"
-        app:cardCornerRadius="20dp"
-        android:background="@drawable/edt_bg">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/report"
-            android:text="Report"
-            android:layout_marginTop="5dp"
-            android:textSize="20dp"
-            android:layout_marginLeft="20dp"
-            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"/>
 
     </androidx.cardview.widget.CardView>
 

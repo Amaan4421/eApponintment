@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
@@ -9,7 +8,6 @@
     android:background="#C1BFBF"
     tools:context=".fragments.HomeDocFragment"
     android:layout_marginTop="?attr/actionBarSize">
-
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPage"
@@ -43,8 +41,6 @@
         </androidx.cardview.widget.CardView>
 
     </ScrollView>
-
-
 
 </RelativeLayout>
 

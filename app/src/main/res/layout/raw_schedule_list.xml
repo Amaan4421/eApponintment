@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:background="@drawable/bg_card">
+
+   <de.hdodenhof.circleimageview.CircleImageView
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       app:civ_border_color="#fff"
+       app:civ_border_width="2dp"
+       android:layout_marginTop="30dp"
+       android:id="@+id/img_book"
+       android:src="@drawable/ic_baseline_account_circle"/>
+
+   <TextView
+       android:id="@+id/tv_t1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="75dp"
+       android:layout_marginTop="10dp"
+       android:text="Patient Name:"
+       android:textColor="#fff"
+       android:textSize="20dp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tv_doc1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="200dp"
+       android:layout_marginTop="10dp"
+       android:text="Name"
+       android:textColor="#fff"
+       android:textSize="20dp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tv_t2"
+       android:layout_below="@id/tv_doc1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="95dp"
+       android:text="Number:"
+       android:textColor="#fff"
+       android:textSize="15dp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tv_doc2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/tv_doc1"
+       android:layout_marginLeft="150dp"
+       android:text="Number"
+       android:textColor="#fff"
+       android:textSize="15dp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tv_t3"
+       android:layout_below="@id/tv_doc2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="95dp"
+       android:text="Appointment Date:"
+       android:textColor="#fff"
+       android:textSize="15dp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tv_doc3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/tv_doc2"
+       android:layout_marginLeft="215dp"
+       android:text="Date"
+       android:textColor="#fff"
+       android:textSize="15dp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tv_t4"
+       android:layout_below="@id/tv_doc3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="95dp"
+       android:text="Appointment Time:"
+       android:textColor="#fff"
+       android:textSize="15dp"
+       android:textStyle="bold" />
+
+   <TextView
+       android:id="@+id/tv_doc4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/tv_doc3"
+       android:layout_marginLeft="215dp"
+       android:text="Time"
+       android:textColor="#fff"
+       android:textSize="15dp"
+       android:textStyle="bold" />
+
+</RelativeLayout>

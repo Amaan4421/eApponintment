@@ -10,11 +10,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.smartapponintment.R;
-
 
 public class AdminHomeFragment extends Fragment {
 
@@ -27,6 +27,7 @@ public class AdminHomeFragment extends Fragment {
         View rootview = inflater.inflate(R.layout.fragment_admin_home,container,false);
         adminPanel = rootview.findViewById(R.id.adminButton);
 
+
         adminPanel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +36,7 @@ public class AdminHomeFragment extends Fragment {
                 TextView add2 = tvAdmin.findViewById(R.id.add2);
                 TextView delete2 = tvAdmin.findViewById(R.id.delete2);
                 TextView hosp2 = tvAdmin.findViewById(R.id.hosp2);
-                TextView user2 = tvAdmin.findViewById(R.id.user2);
+                TextView update2 = tvAdmin.findViewById(R.id.update2);
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 AlertDialog alertDialog = builder.create();
                 alertDialog.setView(tvAdmin);
@@ -89,7 +90,7 @@ public class AdminHomeFragment extends Fragment {
                     }
                 });
 
-                user2.setOnClickListener(new View.OnClickListener() {
+                update2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
@@ -99,15 +100,13 @@ public class AdminHomeFragment extends Fragment {
                         }
                         Fragment fragment = null;
                         FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                        fragment = new ShowUsersFragment();
+                        fragment = new UpdateDoctorFragment();
                         fragmentTransaction.replace(R.id.frame,fragment);
                         fragmentTransaction.commit();
                     }
                 });
-
             }
         });
-
         return rootview;
     }
 }

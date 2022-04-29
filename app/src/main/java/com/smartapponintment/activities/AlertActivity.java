@@ -1,13 +1,13 @@
 package com.smartapponintment.activities;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.smartapponintment.R;
 
@@ -30,7 +30,6 @@ public class AlertActivity extends AppCompatActivity {
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                         Toast.makeText(AlertActivity.this, "Yes is clicked", Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -38,23 +37,16 @@ public class AlertActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(AlertActivity.this, "No is clicked", Toast.LENGTH_SHORT).show();
-
-
                     }
                 });
                 builder.setNeutralButton("Finish", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
                         dialog.dismiss();
                     }
                 });
-
                 builder.show();
-
             }
         });
-
-
     }
 }

@@ -9,23 +9,24 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.smartapponintment.R;
-import com.smartapponintment.fragments.AdminHomeFragment;
+import com.smartapponintment.activities.BookDoctorActivity;
 import com.smartapponintment.models.DoctorModel;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class DoctorAdapter extends BaseAdapter{
+
     Context context;
     ArrayList<DoctorModel> doctorModelArrayList;
     ArrayList<DoctorModel> doctorModelArrayListFiltered;
 
-    public DoctorAdapter(Context context, ArrayList<DoctorModel> categoryModelArrayList) {
-
+    public DoctorAdapter(Context context, ArrayList<DoctorModel> doctorModelArrayList)
+    {
         this.context = context;
         this.doctorModelArrayList = doctorModelArrayList;
         this.doctorModelArrayListFiltered = new ArrayList<DoctorModel>();
         this.doctorModelArrayListFiltered.addAll(doctorModelArrayList);
-
     }
 
     @Override
@@ -48,44 +49,58 @@ public class DoctorAdapter extends BaseAdapter{
         LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = layoutInflater.inflate(R.layout.raw_list, null);
 
-//        CircleImageView imgBook = convertView.findViewById(R.id.img_book);
-//        String url = doctorModelArrayList.get(position).getCat_url();
-//         Glide.with(context).load(url).into(imgBook);
-        TextView tvBook = convertView.findViewById(R.id.tv_book);
-        //imgBook.setImageResource(categoryModelArrayList.get(position).getImgBook());
-        tvBook.setText(doctorModelArrayList.get(position).getDoc_Name());
+        TextView docName = convertView.findViewById(R.id.tv_doc1);
+        docName.setText(doctorModelArrayList.get(position).getDoc_Name());
+        TextView docHospname = convertView.findViewById(R.id.tv_doc2);
+        docHospname.setText(doctorModelArrayList.get(position).getDoc_Hosp_name());
+        TextView docSp = convertView.findViewById(R.id.tv_doc3);
+        docSp.setText(doctorModelArrayList.get(position).getDoc_Speciality());
+        TextView docDegree = convertView.findViewById(R.id.tv_doc4);
+        docDegree.setText(doctorModelArrayList.get(position).getDoc_Degree());
+
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String url = categoryModelArrayList.get(position).getCat_url();
+
                 String strId = doctorModelArrayList.get(position).getDoc_id();
                 String docName = doctorModelArrayList.get(position).getDoc_Name();
                 String docHospital = doctorModelArrayList.get(position).getDoc_Hosp_name();
                 String docSpeciality = doctorModelArrayList.get(position).getDoc_Speciality();
+                String docDegree = doctorModelArrayList.get(position).getDoc_Degree();
+                String docNumber = doctorModelArrayList.get(position).getDoc_Number();
+                String docEmail = doctorModelArrayList.get(position).getDoc_Email();
 
-                Intent i = new Intent(context, AdminHomeFragment.class);
+                Intent i = new Intent(context, BookDoctorActivity.class);
                 i.putExtra("KEY_ID",strId);
                 i.putExtra("KEY_NAME",docName);
                 i.putExtra("KEY_DOCHOSPITAL",docHospital);
                 i.putExtra("KEY_DOCSP",docSpeciality);
+                i.putExtra("KEY_DOCDEGREE",docDegree);
+                i.putExtra("KEY_DOCNUMBER",docNumber);
+                i.putExtra("KEY_DOCEMAIL",docEmail);
                 context.startActivity(i);
             }
         });
         return convertView;
     }
-//    // Filter Class
-//    public void filter(String charText) {
-//        charText = charText.toLowerCase(Locale.getDefault());
-//        doctorModelArrayList.clear();
-//        if (charText.length() == 0) {
-//            doctorModelArrayList.addAll(doctorModelArrayListFiltered);
-//        } else {
-//            for (DoctorModel wp : doctorModelArrayListFiltered) {
-//                if (wp.getDoc_Name().toLowerCase(Locale.getDefault()).contains(charText)) {
-//                    doctorModelArrayList.add(wp);
-//                }
-//            }
-//        }
-//        notifyDataSetChanged();
-//    }
+
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        doctorModelArrayList.clear();
+        if (charText.length() == 0)
+        {
+            doctorModelArrayList.addAll(doctorModelArrayListFiltered);
+        }
+        else
+        {
+            for (DoctorModel wp : doctorModelArrayListFiltered)
+            {
+                if (wp.getDoc_Name().toLowerCase(Locale.getDefault()).contains(charText))
+                {
+                    doctorModelArrayList.add(wp);
+                }
+            }
+        }
+        notifyDataSetChanged();
+    }
 }

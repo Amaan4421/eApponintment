@@ -13,7 +13,6 @@
         android:background="@drawable/ic_home"
         android:src="@drawable/bg" />
 
-
     <ImageView
         android:id="@+id/ic_applogo"
         android:layout_width="134dp"
@@ -22,7 +21,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="60dp"
         android:src="@drawable/applogo" />
-
 
     <TextView
         android:id="@+id/home_name"
@@ -66,7 +64,5 @@
         android:textColor="#fff"
         android:textSize="20dp"
         android:textStyle="bold" />
-
-
 
 </RelativeLayout>

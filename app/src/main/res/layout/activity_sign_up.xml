@@ -7,7 +7,6 @@
     android:layout_width="wrap_content"
     tools:context=".activities.SignUpActivity">
 
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,17 +19,29 @@
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:src="@drawable/applogo" />
+        android:src="@drawable/applogo"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_home"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="eAppointment"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
-        android:layout_below="@+id/ic_home"
+        android:layout_height="600dp"
+        android:layout_below="@+id/tv_name"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/bg_card"
-        android:paddingHorizontal="40dp"
+        android:paddingHorizontal="20dp"
         android:paddingVertical="10dp">
 
         <TextView
@@ -41,7 +52,7 @@
             android:fontFamily="sans-serif"
             android:text="Sign Up"
             android:textColor="#fff"
-            android:textSize="30sp"
+            android:textSize="25dp"
             android:textStyle="bold" />
 
         <RadioGroup
@@ -72,122 +83,161 @@
 
         </RadioGroup>
 
-
-        <TextView
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edt_uname"
-            android:layout_width="260dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_rg"
-
-            android:text="Username:"
-            android:textColor="#FAF8F8" />
-
-        <EditText
-            android:id="@+id/edt_fname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_uname"
+            android:layout_marginTop="15dp"
             android:background="@drawable/edt_bg"
-            android:drawableRight="@drawable/ic_baseline_account_circle"
-            android:hint="Enter your username"
-            android:inputType="textPersonName"
+            android:hint="Enter Your Username"
             android:padding="5dp"
-            android:singleLine="true"
-            android:textColor="#E91E63"
-            android:textColorHint="#660E0606" />
+            android:textColorHint="#660E0606"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:hintTextColor="#D7FB0707">
 
-        <TextView
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_fname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_baseline_account_circle"
+                android:drawableTint="#8B000000"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="#000000">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edt_mail"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_fname"
-            android:text="Email:"
-            android:textColor="#FAF8F8" />
-
-        <EditText
-            android:id="@+id/edt_mail2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_mail"
+            android:layout_below="@id/edt_uname"
+            android:layout_marginTop="10dp"
             android:background="@drawable/edt_bg"
-            android:drawableRight="@drawable/ic_baseline_email"
-            android:hint="Enter your Email"
-            android:inputType="textEmailAddress"
+            android:hint="Enter Your Email"
             android:padding="5dp"
-            android:singleLine="true"
-            android:textColor="#E91E63"
-            android:textColorHint="#660E0606" />
+            android:textColorHint="#660E0606"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:hintTextColor="#D7FB0707">
 
-        <TextView
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_mail2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_baseline_email"
+                android:drawableTint="#8B000000"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="#000000">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edt_phone"
-            android:layout_width="260dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_mail2"
-            android:text="Mobile Number:"
-            android:textColor="#FAF8F8" />
+            android:layout_below="@id/edt_mail"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bg"
+            android:hint="Enter Your Mobilenumber"
+            android:padding="5dp"
+            android:textColorHint="#660E0606"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:hintTextColor="#D7FB0707">
 
-        <EditText
-            android:id="@+id/edt_phone2"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_phone2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_baseline_phone_android"
+                android:drawableTint="#8B000000"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#000000">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_pass"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_phone"
+            android:layout_marginTop="10dp"
             android:background="@drawable/edt_bg"
-            android:drawableRight="@drawable/ic_baseline_phone_android"
-            android:hint="Enter your Mobile Number"
-            android:inputType="number"
+            android:hint="Enter Your Password"
             android:padding="5dp"
-            android:singleLine="true"
-            android:textColor="#E91E63"
-            android:textColorHint="#660E0606" />
+            android:textColorHint="#660E0606"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:hintTextColor="#D7FB0707"
+            app:passwordToggleDrawable="@drawable/ic_eye"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#8B000000">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="#000000">
 
-        <TextView
-            android:id="@+id/edt_pass"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_phone2"
-            android:layout_marginTop="5dp"
-            android:text="Password:"
-            android:textColor="#FAF8F8" />
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/edt_password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_pass2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_pass"
+            android:layout_marginTop="10dp"
             android:background="@drawable/edt_bg"
-            android:drawableRight="@drawable/ic_baseline_lock"
-            android:hint="Enter your Passwprd"
-            android:inputType="textPassword"
+            android:hint="Re-enter Your Password"
             android:padding="5dp"
-            android:singleLine="true"
-            android:textColor="#E91E63"
-            android:textColorHint="#660E0606" />
+            android:textColorHint="#660E0606"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:hintTextColor="#D7FB0707"
+            app:passwordToggleDrawable="@drawable/ic_eye"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#8B000000">
 
-        <TextView
-            android:id="@+id/edt_pass2"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_password"
-            android:layout_marginTop="5dp"
-            android:text="Confirm Password:"
-            android:textColor="#FAF8F8" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="#000000">
 
-        <EditText
-            android:id="@+id/edt_password2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_pass2"
-            android:background="@drawable/edt_bg"
-            android:drawableRight="@drawable/ic_baseline_lock"
-            android:hint="Confirm your Password"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            android:padding="5dp"
-            android:singleLine="true"
-            android:textColor="#E91E63"
-            android:textColorHint="#660E0606" />
-
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </RelativeLayout>
 
@@ -196,7 +246,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="720dp"
         android:background="@drawable/btn_bg"
         android:padding="3dp"
         android:text="SignUp"
@@ -207,10 +257,10 @@
         android:id="@+id/old_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:padding="10dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:padding="10dp"
         android:text="Already have an account? Click here to Login"
         android:textColor="#fff"
         android:textSize="15dp"

@@ -8,14 +8,15 @@
     android:background="#C1BFBF"
     android:layout_marginTop="?attr/actionBarSize">
 
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
         android:layout_width="110dp"
         android:layout_height="114dp"
         android:paddingTop="10dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_baseline_account_circle" />
+        android:src="@drawable/ic_baseline_account_circle"
+        app:civ_border_color="#F60505"
+        app:civ_border_width="2dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card1"
@@ -95,16 +96,15 @@
         android:textSize="15dp"/>
 
     <android.widget.Button
-        android:layout_width="200dp"
         android:id="@+id/btn_logout"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Logout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/btn_bg"
-        android:textColor="#fff"
-        android:textAlignment="center" />
-
+        android:text="Logout"
+        android:textAlignment="center"
+        android:textColor="#fff" />
 
 </RelativeLayout>

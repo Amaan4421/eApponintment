@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/bg.xml" value="0.1335" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/bg_card.xml" value="0.1475" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/bg_raw.xml" value="0.1145" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/btn_bg.xml" value="0.1335" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/edt_bg.xml" value="0.1" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_account_circle.xml" value="0.1345" />
@@ -21,24 +22,34 @@
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_schedule_24.xml" value="0.183" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_baseline_settings.xml" value="0.1345" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.183" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_eye.xml" value="0.1145" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1345" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1475" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.183" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/drawable/raw_card.xml" value="0.1125" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_admin_cat.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_alert.xml" value="0.2" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_appointment.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_book_doctor.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_bottom_admin.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_bottom_doc.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_bottom_nav.xml" value="0.2" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_confirmation.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_delete.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_imageslider.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_patient_details.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_show_appointment.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_splash.xml" value="0.176" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/activity_update.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/appointment_list_view.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_add_doctor.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_add_hospital.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_admin_home.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_admin_profile.xml" value="0.19067977768277042" />
-        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_book_apointment.xml" value="0.25" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_book_apointment.xml" value="0.176" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_dashboard.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_delete_doctor.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_doctor_home.xml" value="0.19067977768277042" />
@@ -46,10 +57,16 @@
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_home_doc.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_notifications.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_schedule.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_setting.xml" value="0.2" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_show_appointment.xml" value="0.1791363830696879" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_show_patients.xml" value="0.15848007414272475" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_show_users.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/fragment_update_doctor.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_admin.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_appointment_list.xml" value="0.2" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_appointment_list2.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_appointment_list_view.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_au.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_cu.xml" value="0.18257645968489342" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_dp.xml" value="0.19067977768277042" />
@@ -57,6 +74,7 @@
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_imgslider.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_list.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_report.xml" value="0.19067977768277042" />
+        <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/layout/raw_schedule_list.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/menu/bottom_nav_admin.xml" value="0.19067977768277042" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/menu/bottom_nav_doc.xml" value="0.2" />
         <entry key="..\:/Users/AMAAN/AndroidStudioProjects/SmartApponintment/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20521590423257802" />

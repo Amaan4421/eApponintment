@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4394F">
+    android:gravity="center"
+    android:background="@color/teal_200"
+    android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_raw">
 
     <TextView
+        android:id="@+id/au"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/au"
-        android:text="About Us"
-        android:textSize="35dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="#0C0C0C"/>
+        android:text="About Us"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#0C0C0C"
+        android:textSize="35dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/au"
+        android:layout_marginLeft="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         android:text="@string/au"
         android:textColor="#130F0F"
-        android:textStyle="bold"
         android:textSize="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"/>
+        android:textStyle="bold" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

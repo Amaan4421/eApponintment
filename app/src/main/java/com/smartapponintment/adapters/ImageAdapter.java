@@ -10,14 +10,13 @@ import androidx.viewpager.widget.ViewPager;
 import com.smartapponintment.R;
 import com.smartapponintment.fragments.HomeFragment;
 
-
 public class ImageAdapter extends PagerAdapter {
-        HomeFragment mContext;
+
+    HomeFragment mContext;
 
     public ImageAdapter(HomeFragment context) {
         this.mContext = context;
     }
-
 
     @Override
         public boolean isViewFromObject(View view, Object object) {
@@ -38,11 +37,9 @@ public class ImageAdapter extends PagerAdapter {
             return imageView;
         }
 
-
-
-    @Override
+        @Override
         public void destroyItem(ViewGroup container, int position, Object object)
-    {
+        {
             ((ViewPager) container).removeView((ImageView) object);
         }
 

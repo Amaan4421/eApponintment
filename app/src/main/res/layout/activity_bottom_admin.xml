@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -13,7 +12,6 @@
         android:background="#FB1403"
         app:title="eAppointment"
         app:titleTextColor="#fff" />
-
 
     <FrameLayout
         android:id="@+id/frame"
@@ -29,6 +27,5 @@
         app:itemTextColor="#fff"
         app:itemIconTint="#fff"
         android:layout_alignParentBottom="true" />
-
 
 </RelativeLayout>

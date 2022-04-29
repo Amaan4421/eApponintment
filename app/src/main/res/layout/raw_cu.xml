@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4394F">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@color/teal_200"
+    android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_raw">
 
     <TextView
+        android:id="@+id/cu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cu"
-        android:text="Contact Us"
-        android:textSize="35dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="#0C0C0C"/>
+        android:text="Contact Us"
+        android:textColor="#0C0C0C"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/text"
         android:layout_below="@+id/cu"
+        android:layout_centerHorizontal="true"
         android:text="@string/cu"
+        android:paddingTop="20dp"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:layout_marginLeft="30dp"
         android:textColor="#130F0F"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
+        android:layout_marginTop="30dp" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

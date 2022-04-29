@@ -15,7 +15,6 @@ import com.smartapponintment.adapters.ImageAdapter2;
 
 public class HomeDocFragment extends Fragment {
 
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -26,6 +25,6 @@ public class HomeDocFragment extends Fragment {
         ImageAdapter2 adapterView = new ImageAdapter2(this);
         mViewPager.setAdapter(adapterView);
 
-    return rootview;
+        return rootview;
     }
 }

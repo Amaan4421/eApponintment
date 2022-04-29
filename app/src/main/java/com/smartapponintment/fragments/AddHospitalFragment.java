@@ -50,7 +50,7 @@ public class AddHospitalFragment extends Fragment {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),"Hospital Added!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Hospital Added Successfully!!",Toast.LENGTH_SHORT).show();
 
                 String strName = edtName.getText().toString();
                 String strEmail = edtEmail.getText().toString();
@@ -83,5 +83,4 @@ public class AddHospitalFragment extends Fragment {
         });
         return rootview;
     }
-
 }

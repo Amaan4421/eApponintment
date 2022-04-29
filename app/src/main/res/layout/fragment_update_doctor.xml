@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#C1BFBF"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context=".fragments.UpdateDoctorFragment">
+
+    <TextView
+        android:id="@+id/id1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Admin Panel(Update Doctor)"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_below="@id/id1"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:queryHint="Search doctor name..."
+        android:layout_marginTop="5dp"
+        android:background="#8C8989"
+        android:iconifiedByDefault="false">
+
+    </SearchView>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
+
+</LinearLayout>

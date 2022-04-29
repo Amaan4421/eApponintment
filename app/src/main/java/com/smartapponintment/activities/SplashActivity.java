@@ -26,20 +26,33 @@ public class SplashActivity extends AppCompatActivity {
         imageView.setGifImageResource(R.drawable.splash_gif);
         SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
         String strEmail = sharedPreferences.getString("KEY_PREF_EMAIL", "");
+        String strRole = sharedPreferences.getString("KEY_USERROLE","");
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                if (strEmail.equals(""))
+                if (strEmail.equals("admin27@gmail.com"))
                 {
-                    Intent i = new Intent(SplashActivity.this,MainActivity.class);
+                    Intent i = new Intent(SplashActivity.this,BottomAdminActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+                else if(strRole.equals("Doctor"))
+                {
+                    Intent i = new Intent(SplashActivity.this,BottomDocActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+                else if(strRole.equals("Patient"))
+                {
+                    Intent i = new Intent(SplashActivity.this,BottomNavActivity.class);
                     startActivity(i);
                     finish();
                 }
                 else
                 {
-                    Intent i = new Intent(SplashActivity.this,BottomDocActivity.class);
+                    Intent i = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(i);
                     finish();
                 }

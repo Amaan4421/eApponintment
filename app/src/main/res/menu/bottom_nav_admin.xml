@@ -11,5 +11,4 @@
         android:icon="@drawable/ic_baseline_book_online"
         android:title="Profile" />
 
-
 </menu>

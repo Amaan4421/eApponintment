@@ -41,17 +41,15 @@ public class BottomAdminActivity extends AppCompatActivity {
                 Fragment fragment = null;
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
-
-                if (id == R.id.ad_home) {
-
+                if (id == R.id.ad_home)
+                {
                     fragment = new AdminHomeFragment();
                     fragmentTransaction.replace(R.id.frame,fragment);
                     fragmentTransaction.commit();
                     toolbar.setTitle("Home");
-
                 }
-                 else if (id == R.id.ad_profile) {
-
+                else if (id == R.id.ad_profile)
+                {
                     toolbar.setTitle("Profile");
                     fragment = new AdminProfileFragment();
                     fragmentTransaction.replace(R.id.frame, fragment);
@@ -59,9 +57,6 @@ public class BottomAdminActivity extends AppCompatActivity {
                 }
                 return true;
             }
-
         });
     }
-
-
 }

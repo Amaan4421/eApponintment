@@ -2,7 +2,15 @@ package com.smartapponintment.models;
 
 public class RegisterModel {
 
-    String user_id,user_firstName,user_email,user_password,user_mobileNumbr,user_BG,user_DOB,user_Address,user_Url;
+    String user_id,user_firstName,user_email,user_mobileNumbr,user_BG,user_DOB,user_Address,user_Url,user_Role;
+
+    public String getUser_Role() {
+        return user_Role;
+    }
+
+    public void setUser_Role(String user_Role) {
+        this.user_Role = user_Role;
+    }
 
     public String getUser_Url() {
         return user_Url;
@@ -40,9 +48,7 @@ public class RegisterModel {
         return user_mobileNumbr;
     }
 
-    public void setUser_mobileNumbr(String user_mobileNumbr) {
-        this.user_mobileNumbr = user_mobileNumbr;
-    }
+    public void setUser_mobileNumbr(String user_mobileNumbr) { this.user_mobileNumbr = user_mobileNumbr; }
 
     public String getUser_id(String strUId) {
         return user_id;
@@ -68,11 +74,4 @@ public class RegisterModel {
         this.user_email = user_email;
     }
 
-    public String getUser_password() {
-        return user_password;
-    }
-
-    public void setUser_password(String user_password) {
-        this.user_password = user_password;
-    }
 }

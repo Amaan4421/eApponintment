@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.DeleteDoctorFragment"
     android:background="#C1BFBF"
     android:layout_marginTop="?attr/actionBarSize">
@@ -19,86 +18,28 @@
         android:textSize="30dp"
         android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
-        android:layout_width="match_parent"
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/id1"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/edt_bg"
-        android:elevation="400dp"
-        app:cardBackgroundColor="#B2FB0303"
-        app:cardCornerRadius="20dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:background="#8C8989"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search doctor name...">
 
-        <TextView
-            android:id="@+id/id2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/id1"
-            android:padding="20dp"
-            android:text="Hospital Name:"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
+    </SearchView>
 
-        <EditText
-            android:id="@+id/e1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/id1"
-            android:layout_marginLeft="150dp"
-            android:hint="Enter Hospital Name"
-            android:padding="20dp"
-            android:textSize="20dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card2"
+    <ListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/card1"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/edt_bg"
-        android:elevation="400dp"
-        app:cardBackgroundColor="#B2FB0303"
-        app:cardCornerRadius="20dp">
-
-        <TextView
-            android:id="@+id/id3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/id2"
-            android:padding="20dp"
-            android:text="Doctor Name:"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-        <EditText
-            android:id="@+id/e2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/id2"
-            android:layout_marginLeft="130dp"
-            android:hint="Enter Doctor Name"
-            android:padding="20dp"
-            android:textSize="20dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <android.widget.Button
-        android:id="@+id/deleteButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/card2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/btn_bg"
-        android:padding="20dp"
-        android:text="Delete"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
 
 </RelativeLayout>

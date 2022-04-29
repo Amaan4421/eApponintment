@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UpdateActivity"
+    android:background="@color/teal_200">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FB1403"
+        app:title="Update Doctor"
+        app:titleTextColor="#fff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label"
+        android:text="Doctor Details"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        app:civ_border_color="@color/purple_700"
+        app:civ_border_width="3dp"
+        android:layout_below="@+id/label"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/img_book"
+        android:src="@drawable/ic_baseline_account_circle"/>
+
+    <TextView
+        android:id="@+id/tv_doc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_book"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Doctor Name"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_doc1"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:text="Hospital Name:"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/tv_doc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_doc1"
+        android:layout_marginLeft="230dp"
+        android:text="Hospital Name"
+        android:background="@drawable/edt_bg"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="15dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_t3"
+        android:layout_below="@id/tv_doc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="60dp"
+        android:text="Speciality:"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/tv_doc3"
+        android:layout_below="@id/tv_doc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:text="Speciality"
+        android:background="@drawable/edt_bg"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="15dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_doc3"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:text="Degree:"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_doc4"
+        android:layout_below="@id/tv_doc3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:text="Degree"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_t5"
+        android:layout_below="@id/tv_doc4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:text="Email:"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_doc5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_doc4"
+        android:layout_marginLeft="130dp"
+        android:text="Email"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_t6"
+        android:layout_below="@id/tv_doc5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:text="Mobile Number:"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/tv_doc6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_doc5"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_bg"
+        android:paddingHorizontal="15dp"
+        android:text="Mobile Number"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <android.widget.Button
+        android:id="@+id/btn_update"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_doc6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_bg"
+        android:padding="15dp"
+        android:text="Update"
+        android:textColor="#fff"
+        android:textSize="30dp" />
+
+</RelativeLayout>

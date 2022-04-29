@@ -43,4 +43,5 @@ public class HospitalModel {
     public void setHos_Number(String hos_Number) {
         this.hos_Number = hos_Number;
     }
+
 }

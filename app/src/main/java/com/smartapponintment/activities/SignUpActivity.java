@@ -42,7 +42,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -123,13 +122,13 @@ public class SignUpActivity extends AppCompatActivity {
                         firebaseAuth.createUserWithEmailAndPassword(strEmail, strPassword).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
+                                if (task.isSuccessful())
+                                {
                                     String uID = firebaseAuth.getUid();
                                     RegisterModel registerModel = new RegisterModel();
                                     registerModel.setUser_id(uID);
                                     registerModel.setUser_firstName(strFname);
                                     registerModel.setUser_email(strEmail);
-                                    registerModel.setUser_password(strPassword);
                                     registerModel.setUser_mobileNumbr(strNum);
                                     SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -137,25 +136,30 @@ public class SignUpActivity extends AppCompatActivity {
                                     editor.putString("KEY_PREF_EMAIL", strEmail);
                                     editor.putString("KEY_PREF_USERNAME", strFname);
                                     editor.putString("KEY_PREF_MOBILENUMBER", strNum);
-                                    editor.putString("KEY_PREF_PASSWORD", strPassword);
                                     editor.remove("KEY_PREF_BG");
                                     editor.remove("KEY_PREF_ADDRESS");
                                     editor.remove("KEY_PREF_DOB");
-                                    editor.commit();
-                                    databaseReference.child(uID).setValue(registerModel);
-                                }
+                                    editor.remove("KEY_USERURL");
+
                                 if (edtB2.isChecked())
                                 {
+                                    registerModel.setUser_Role(strB2);
+                                    editor.putString("KEY_USERROLE",strB2);
                                     Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
                                     startActivity(i);
                                     finish();
                                 }
                                 else
                                 {
+                                    registerModel.setUser_Role(strB1);
+                                    editor.putString("KEY_USERROLE",strB1);
                                     Intent i = new Intent(SignUpActivity.this, BottomDocActivity.class);
                                     startActivity(i);
                                     finish();
                                 }
+                                    editor.commit();
+                                    databaseReference.child(uID).setValue(registerModel);
+                            }
                             }
                         });
                     }

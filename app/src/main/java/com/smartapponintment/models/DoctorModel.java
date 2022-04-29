@@ -59,4 +59,5 @@ public class DoctorModel {
     public void setDoc_Hosp_name(String doc_Hosp_name) {
         this.doc_Hosp_name = doc_Hosp_name;
     }
+
 }

@@ -20,15 +20,27 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/applogo" />
 
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_home"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="eAppointment"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="352dp"
+        android:layout_height="400dp"
         android:layout_below="@+id/ic_home"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/bg_card"
-        android:paddingHorizontal="40dp"
+        android:paddingHorizontal="20dp"
         android:paddingVertical="10dp">
 
         <TextView
@@ -42,100 +54,80 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_rg"
-        android:layout_below="@+id/tv_login"
-        android:showDividers="beginning|middle|end"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true">
-
-        <RadioButton
-            android:id="@+id/rb1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:text="Admin"
-            android:textColor="#fff" />
-
-            <RadioButton
-                android:id="@+id/rb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:checked="false"
-                android:text="Doctor"
-                android:textColor="#fff"/>
-        <RadioButton
-            android:id="@+id/rb3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:checked="false"
-            android:text="Patient"
-            android:textColor="#fff"/>
-
-    </RadioGroup>
-
-        <TextView
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edt_email"
-            android:layout_width="260dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_rg"
-            android:layout_marginTop="10dp"
-            android:text="Email:"
-            android:textColor="#FAF8F8" />
+            android:layout_marginTop="100dp"
+            android:hint="Enter Your Email"
+            android:background="@drawable/edt_bg"
+            android:textColorHint="#660E0606"
+            android:padding="5dp"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:hintTextColor="#D7FB0707">
 
-        <EditText
-            android:id="@+id/edt_email2"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_email2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableRight="@drawable/ic_baseline_email"
+                android:drawableTint="#8B000000"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="#000000">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edt_email"
+            android:layout_marginTop="30dp"
             android:background="@drawable/edt_bg"
-            android:hint="Enter your Email"
-            android:drawableRight="@drawable/ic_baseline_email"
-            android:textColorHint="#660E0606"
-            android:inputType="textEmailAddress"
+            android:hint="Enter Your Password"
             android:padding="5dp"
-            android:singleLine="true"
-            android:textColor="#E91E63" />
-
-        <TextView
-            android:id="@+id/edt_password"
-            android:layout_width="260dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_email2"
-            android:layout_marginTop="5dp"
-            android:text="Password:"
-            android:textColor="#FAF8F8" />
-
-        <EditText
-            android:id="@+id/edt_password2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_password"
-            android:background="@drawable/edt_bg"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            android:hint="Enter your Password"
-            android:drawableRight="@drawable/ic_baseline_lock"
             android:textColorHint="#660E0606"
-            android:padding="5dp"
-            android:singleLine="true"
-            android:textColor="#E91E63" />
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            app:hintTextColor="#D7FB0707"
+            app:passwordToggleDrawable="@drawable/ic_eye"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#8B000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="#000000">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/tv_fp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_password2"
+            android:layout_below="@+id/edt_password"
             android:layout_alignParentRight="true"
             android:layout_marginTop="12dp"
             android:layout_marginRight="11dp"
             android:text="Forgot password?"
             android:textColor="#fff" />
-
 
     </RelativeLayout>
 
@@ -145,13 +137,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ic_home"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="445dp"
         android:background="@drawable/btn_bg"
         android:padding="5dp"
         android:text="Login"
         android:textColor="#fff"
         android:textStyle="bold" />
-
 
     <TextView
         android:id="@+id/new_acc"
@@ -159,7 +150,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="5dp"
+        android:paddingBottom="10dp"
         android:text="Don't have an account? Click here to Sign up"
         android:textColor="#fff"
         android:textSize="15dp"

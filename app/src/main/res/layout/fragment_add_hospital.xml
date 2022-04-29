@@ -49,6 +49,7 @@
         android:layout_marginLeft="150dp"
         android:padding="20dp"
         android:hint="Enter Hospital name"
+        android:imeOptions="actionNext"
         android:textSize="20dp"
         android:textColor="#ffffff"/>
 
@@ -157,6 +158,7 @@
         android:textSize="20dp"
         android:padding="20dp"
         android:textColor="#ffffff"
+        android:imeOptions="actionDone"
         android:layout_below="@+id/t6"
         android:layout_marginLeft="170dp"/>
 
@@ -170,7 +172,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_bg"
-        android:padding="15dp"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="30dp"
         android:text="Add"
         android:textColor="#ffffff"
         android:textSize="30dp"

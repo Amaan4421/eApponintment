@@ -51,7 +51,7 @@ public class AddDoctorFragment extends Fragment {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Doctor Added!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Doctor Added Successfully!!", Toast.LENGTH_SHORT).show();
 
                 String strName = edtName.getText().toString();
                 String strEmail = edtEmail.getText().toString();
@@ -62,6 +62,7 @@ public class AddDoctorFragment extends Fragment {
                 String strId = databaseReference.push().getKey();
 
                 DoctorModel doctorModel = new DoctorModel();
+                doctorModel.setDoc_id(strId);
                 doctorModel.setDoc_Name(strName);
                 doctorModel.setDoc_Email(strEmail);
                 doctorModel.setDoc_Speciality(strSpeciality);
@@ -86,8 +87,6 @@ public class AddDoctorFragment extends Fragment {
                 fragmentTransaction.replace(R.id.frame, fragment);
                 fragmentTransaction.commit();
 
-//                Intent i = new Intent(getActivity(),AdminHomeFragment.class);
-//                startActivity(i);
             }
         });
         return rootview;
