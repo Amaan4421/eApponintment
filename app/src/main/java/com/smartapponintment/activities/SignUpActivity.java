@@ -143,6 +143,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                                 if (edtB2.isChecked())
                                 {
+                                    Toast.makeText(SignUpActivity.this,"Welcome "+strFname,Toast.LENGTH_SHORT).show();
                                     registerModel.setUser_Role(strB2);
                                     editor.putString("KEY_USERROLE",strB2);
                                     Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
@@ -151,6 +152,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 }
                                 else
                                 {
+                                    Toast.makeText(SignUpActivity.this,"Welcome "+strFname,Toast.LENGTH_SHORT).show();
                                     registerModel.setUser_Role(strB1);
                                     editor.putString("KEY_USERROLE",strB1);
                                     Intent i = new Intent(SignUpActivity.this, BottomDocActivity.class);

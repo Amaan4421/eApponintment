@@ -35,6 +35,7 @@
         <activity
             android:name=".activities.BottomAdminActivity"
             android:exported="true"
+            android:windowSoftInputMode="adjustPan"
             android:label="@string/title_activity_bottom_admin" />
         <activity
             android:name=".activities.BottomDocActivity"
@@ -43,6 +44,7 @@
         <activity
             android:name=".activities.BottomNavActivity"
             android:exported="true"
+            android:windowSoftInputMode="adjustPan"
             android:label="@string/title_activity_bottom_nav" />
         <activity
             android:name=".activities.AlertActivity"

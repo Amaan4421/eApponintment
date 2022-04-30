@@ -172,13 +172,14 @@ public class LoginActivity extends AppCompatActivity {
 
                                             if (loginRole.equals("Patient"))
                                             {
-                                                Toast.makeText(LoginActivity.this,"Welcome "+loginName,Toast.LENGTH_LONG).show();
+                                                Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
                                                 Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
                                                 startActivity(i);
                                                 finish();
                                             }
                                             if (loginRole.equals("Doctor"))
                                             {
+                                                Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
                                                 Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
                                                 startActivity(i);
                                                 finish();
