@@ -51,8 +51,6 @@ public class AddDoctorFragment extends Fragment {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "Doctor Added Successfully!!", Toast.LENGTH_SHORT).show();
-
                 String strName = edtName.getText().toString();
                 String strEmail = edtEmail.getText().toString();
                 String strSpeciality = edtSpeciality.getText().toString();
@@ -60,33 +58,59 @@ public class AddDoctorFragment extends Fragment {
                 String strHospname = edtHosname.getText().toString();
                 String strDegree = edtDegree.getText().toString();
                 String strId = databaseReference.push().getKey();
+                if(strName.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Name Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strDegree.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Degree Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strNumber.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Number Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strEmail.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Email Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strHospname.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Hospital name Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strSpeciality.equals("")) {
+                    Toast.makeText(getActivity(), "Speciality-Name Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getActivity(), "Doctor Added Successfully!!", Toast.LENGTH_SHORT).show();
 
-                DoctorModel doctorModel = new DoctorModel();
-                doctorModel.setDoc_id(strId);
-                doctorModel.setDoc_Name(strName);
-                doctorModel.setDoc_Email(strEmail);
-                doctorModel.setDoc_Speciality(strSpeciality);
-                doctorModel.setDoc_Number(strNumber);
-                doctorModel.setDoc_Hosp_name(strHospname);
-                doctorModel.setDoc_Degree(strDegree);
-                SharedPreferences sharedPreferences = getContext().getSharedPreferences("e_Appointment", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("KEY_PREF_DOCID", strId);
-                editor.putString("KEY_PREF_DOCNAME", strName);
-                editor.putString("KEY_PREF_DOCEMAIL", strEmail);
-                editor.putString("KEY_PREF_DOCDEGREE", strDegree);
-                editor.putString("KEY_PREF_DOCNUMBER", strNumber);
-                editor.putString("KEY_PREF_DOCS", strSpeciality);
-                editor.putString("KEY_PREF_DOCHOSPNAME", strHospname);
-                editor.commit();
-                databaseReference.child(strId).setValue(doctorModel);
+                    DoctorModel doctorModel = new DoctorModel();
+                    doctorModel.setDoc_id(strId);
+                    doctorModel.setDoc_Name(strName);
+                    doctorModel.setDoc_Email(strEmail);
+                    doctorModel.setDoc_Speciality(strSpeciality);
+                    doctorModel.setDoc_Number(strNumber);
+                    doctorModel.setDoc_Hosp_name(strHospname);
+                    doctorModel.setDoc_Degree(strDegree);
+                    SharedPreferences sharedPreferences = getContext().getSharedPreferences("e_Appointment", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("KEY_PREF_DOCID", strId);
+                    editor.putString("KEY_PREF_DOCNAME", strName);
+                    editor.putString("KEY_PREF_DOCEMAIL", strEmail);
+                    editor.putString("KEY_PREF_DOCDEGREE", strDegree);
+                    editor.putString("KEY_PREF_DOCNUMBER", strNumber);
+                    editor.putString("KEY_PREF_DOCS", strSpeciality);
+                    editor.putString("KEY_PREF_DOCHOSPNAME", strHospname);
+                    editor.commit();
+                    databaseReference.child(strId).setValue(doctorModel);
 
-                Fragment fragment = null;
-                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragment = new AdminHomeFragment();
-                fragmentTransaction.replace(R.id.frame, fragment);
-                fragmentTransaction.commit();
-
+                    Fragment fragment = null;
+                    FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                    fragment = new AdminHomeFragment();
+                    fragmentTransaction.replace(R.id.frame, fragment);
+                    fragmentTransaction.commit();
+                }
             }
         });
         return rootview;

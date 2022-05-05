@@ -25,6 +25,7 @@
         android:layout_below="@id/imageView"
         android:layout_marginTop="25dp"
         android:background="@drawable/edt_bg"
+        android:layout_marginHorizontal="15dp"
         android:elevation="400dp"
         app:cardCornerRadius="20dp">
 
@@ -45,8 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
-            android:paddingLeft="15dp"
             android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
             android:text="Username:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="20dp" />
@@ -60,6 +61,7 @@
         android:layout_marginTop="25dp"
         android:id="@+id/card2"
         android:elevation="200dp"
+        android:layout_marginHorizontal="15dp"
         app:cardCornerRadius="20dp"
         android:background="@drawable/edt_bg">
 

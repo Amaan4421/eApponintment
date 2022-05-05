@@ -95,6 +95,10 @@ public class SignUpActivity extends AppCompatActivity {
                 {
                     Toast.makeText(SignUpActivity.this, "Enter Mobile Number", Toast.LENGTH_SHORT).show();
                 }
+                else if(strNum.length()>10)
+                {
+                    Toast.makeText(SignUpActivity.this, "Enter Correct Number", Toast.LENGTH_SHORT).show();
+                }
                 else if (strPassword.equals(""))
                 {
                     Toast.makeText(SignUpActivity.this, "Enter your Password", Toast.LENGTH_SHORT).show();

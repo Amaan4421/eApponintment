@@ -50,35 +50,55 @@ public class AddHospitalFragment extends Fragment {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),"Hospital Added Successfully!!",Toast.LENGTH_SHORT).show();
 
-                String strName = edtName.getText().toString();
-                String strEmail = edtEmail.getText().toString();
-                String strAddress = edtAddress.getText().toString();
-                String strNumber = edtNumber.getText().toString();
-                String strId = databaseReference.push().getKey();
+            String strName = edtName.getText().toString();
+            String strEmail = edtEmail.getText().toString();
+            String strAddress = edtAddress.getText().toString();
+            String strNumber = edtNumber.getText().toString();
+            String strId = databaseReference.push().getKey();
 
-                HospitalModel hospitalModel = new HospitalModel();
-                hospitalModel.setHos_id(strId);
-                hospitalModel.setHos_Name(strName);
-                hospitalModel.setHos_Email(strEmail);
-                hospitalModel.setHos_Address(strAddress);
-                hospitalModel.setHos_Number(strNumber);
-                SharedPreferences sharedPreferences = getContext().getSharedPreferences("e_Appointment", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("KEY_PREF_HOSID",strId);
-                editor.putString("KEY_PREF_HOSNAME",strName);
-                editor.putString("KEY_PREF_HOSEMAIL",strEmail);
-                editor.putString("KEY_PREF_HOSADDRESS",strAddress);
-                editor.putString("KEY_PREF_HOSNUMBER",strNumber);
-                editor.commit();
-                databaseReference.child(strId).setValue(hospitalModel);
+                if(strName.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Name Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strEmail.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Email Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strAddress.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Hospital Address Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strNumber.equals(""))
+                {
+                    Toast.makeText(getActivity(), "Number Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getActivity(), "Hospital Added Successfully!!", Toast.LENGTH_SHORT).show();
 
-                Fragment fragment = null;
-                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragment = new AdminHomeFragment();
-                fragmentTransaction.replace(R.id.frame,fragment);
-                fragmentTransaction.commit();
+                    HospitalModel hospitalModel = new HospitalModel();
+                    hospitalModel.setHos_id(strId);
+                    hospitalModel.setHos_Name(strName);
+                    hospitalModel.setHos_Email(strEmail);
+                    hospitalModel.setHos_Address(strAddress);
+                    hospitalModel.setHos_Number(strNumber);
+                    SharedPreferences sharedPreferences = getContext().getSharedPreferences("e_Appointment", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("KEY_PREF_HOSID", strId);
+                    editor.putString("KEY_PREF_HOSNAME", strName);
+                    editor.putString("KEY_PREF_HOSEMAIL", strEmail);
+                    editor.putString("KEY_PREF_HOSADDRESS", strAddress);
+                    editor.putString("KEY_PREF_HOSNUMBER", strNumber);
+                    editor.commit();
+                    databaseReference.child(strId).setValue(hospitalModel);
+
+                    Fragment fragment = null;
+                    FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                    fragment = new AdminHomeFragment();
+                    fragmentTransaction.replace(R.id.frame, fragment);
+                    fragmentTransaction.commit();
+                }
             }
         });
         return rootview;

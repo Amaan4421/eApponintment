@@ -68,10 +68,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_doc1"
         android:layout_marginLeft="230dp"
-        android:text="Hospital Name"
-        android:background="@drawable/edt_bg"
         android:layout_marginTop="15dp"
+        android:background="@drawable/edt_bg"
         android:paddingHorizontal="15dp"
+        android:singleLine="true"
+        android:text="Hospital Name"
         android:textColor="#000"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -90,14 +91,15 @@
 
     <EditText
         android:id="@+id/tv_doc3"
-        android:layout_below="@id/tv_doc2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tv_doc2"
         android:layout_marginLeft="180dp"
-        android:text="Speciality"
-        android:background="@drawable/edt_bg"
         android:layout_marginTop="15dp"
+        android:background="@drawable/edt_bg"
         android:paddingHorizontal="15dp"
+        android:text="Speciality"
+        android:singleLine="true"
         android:textColor="#000"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -170,10 +172,11 @@
         android:layout_marginLeft="230dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/edt_bg"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:singleLine="true"
         android:paddingHorizontal="15dp"
         android:text="Mobile Number"
-        android:inputType="number"
-        android:imeOptions="actionDone"
         android:textColor="#000"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -192,3 +195,5 @@
         android:textSize="30dp" />
 
 </RelativeLayout>
+
+
