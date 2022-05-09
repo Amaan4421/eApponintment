@@ -95,9 +95,9 @@ public class SignUpActivity extends AppCompatActivity {
                 {
                     Toast.makeText(SignUpActivity.this, "Enter Mobile Number", Toast.LENGTH_SHORT).show();
                 }
-                else if(strNum.length()>10)
+                else if(strNum.length()>10 || strNum.length()<10)
                 {
-                    Toast.makeText(SignUpActivity.this, "Enter Correct Number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Password must be have 10 digits", Toast.LENGTH_SHORT).show();
                 }
                 else if (strPassword.equals(""))
                 {
@@ -105,15 +105,15 @@ public class SignUpActivity extends AppCompatActivity {
                 }
                 else if (strPassword.length() < 8)
                 {
-                    Toast.makeText(SignUpActivity.this, "Password must be have 8 characters or number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Password's length must be 8", Toast.LENGTH_SHORT).show();
                 }
                 else if (!strPassword.matches(passwordPattern))
                 {
-                    Toast.makeText(SignUpActivity.this, "Password must contain atleast one number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Password must be a combination of character and number", Toast.LENGTH_SHORT).show();
                 }
                 else if (strPassword2.equals(""))
                 {
-                    Toast.makeText(SignUpActivity.this, "Write your password again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "You need to Re-enter password first", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {

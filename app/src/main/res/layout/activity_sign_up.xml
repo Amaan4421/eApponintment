@@ -33,237 +33,246 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="600dp"
-        android:layout_below="@+id/tv_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/bg_card"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp">
-
-        <TextView
-            android:id="@+id/tv_signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif"
-            android:text="Sign Up"
-            android:textColor="#fff"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:id="@+id/tv_rg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_signup"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:showDividers="beginning|middle">
-
-            <RadioButton
-                android:id="@+id/rb1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:text="Doctor"
-                android:textColor="#fff" />
-
-            <RadioButton
-                android:id="@+id/rb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:checked="false"
-                android:text="Patient"
-                android:textColor="#fff" />
-
-        </RadioGroup>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_uname"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_rg"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/edt_bg"
-            android:hint="Enter Your Username"
-            android:padding="5dp"
-            android:textColorHint="#660E0606"
-            app:boxCornerRadiusBottomEnd="30dp"
-            app:boxCornerRadiusBottomStart="30dp"
-            app:boxCornerRadiusTopEnd="30dp"
-            app:boxCornerRadiusTopStart="30dp"
-            app:hintTextColor="#D7FB0707">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_fname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableRight="@drawable/ic_baseline_account_circle"
-                android:drawableTint="#8B000000"
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:textColor="#000000">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_mail"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_uname"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edt_bg"
-            android:hint="Enter Your Email"
-            android:padding="5dp"
-            android:textColorHint="#660E0606"
-            app:boxCornerRadiusBottomEnd="30dp"
-            app:boxCornerRadiusBottomStart="30dp"
-            app:boxCornerRadiusTopEnd="30dp"
-            app:boxCornerRadiusTopStart="30dp"
-            app:hintTextColor="#D7FB0707">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_mail2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableRight="@drawable/ic_baseline_email"
-                android:drawableTint="#8B000000"
-                android:imeOptions="actionNext"
-                android:inputType="textEmailAddress"
-                android:singleLine="true"
-                android:textColor="#000000">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_phone"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edt_mail"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edt_bg"
-            android:hint="Enter Your Mobilenumber"
-            android:padding="5dp"
-            android:textColorHint="#660E0606"
-            app:boxCornerRadiusBottomEnd="30dp"
-            app:boxCornerRadiusBottomStart="30dp"
-            app:boxCornerRadiusTopEnd="30dp"
-            app:boxCornerRadiusTopStart="30dp"
-            app:hintTextColor="#D7FB0707">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_phone2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableRight="@drawable/ic_baseline_phone_android"
-                android:drawableTint="#8B000000"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:singleLine="true"
-                android:textColor="#000000">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_pass"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_phone"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edt_bg"
-            android:hint="Enter Your Password"
-            android:padding="5dp"
-            android:textColorHint="#660E0606"
-            app:boxCornerRadiusBottomEnd="30dp"
-            app:boxCornerRadiusBottomStart="30dp"
-            app:boxCornerRadiusTopEnd="30dp"
-            app:boxCornerRadiusTopStart="30dp"
-            app:hintTextColor="#D7FB0707"
-            app:passwordToggleDrawable="@drawable/ic_eye"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="#8B000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_password"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionNext"
-                android:inputType="textPassword"
-                android:singleLine="true"
-                android:textColor="#000000">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_pass2"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edt_pass"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edt_bg"
-            android:hint="Re-enter Your Password"
-            android:padding="5dp"
-            android:textColorHint="#660E0606"
-            app:boxCornerRadiusBottomEnd="30dp"
-            app:boxCornerRadiusBottomStart="30dp"
-            app:boxCornerRadiusTopEnd="30dp"
-            app:boxCornerRadiusTopStart="30dp"
-            app:hintTextColor="#D7FB0707"
-            app:passwordToggleDrawable="@drawable/ic_eye"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="#8B000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_password2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionDone"
-                android:inputType="textPassword"
-                android:singleLine="true"
-                android:textColor="#000000">
-
-            </com.google.android.material.textfield.TextInputEditText>
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </RelativeLayout>
-
-    <android.widget.Button
-        android:id="@+id/btn_signup2"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="720dp"
-        android:background="@drawable/btn_bg"
-        android:padding="3dp"
-        android:text="SignUp"
-        android:textColor="#fff"
-        android:textStyle="bold" />
+        android:id="@+id/s1"
+        android:layout_below="@+id/tv_name">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_card"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tv_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif"
+                android:text="Sign Up"
+                android:textColor="#fff"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/tv_rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_signup"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:showDividers="beginning|middle">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Doctor"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:checked="false"
+                    android:text="Patient"
+                    android:textColor="#fff" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_uname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_rg"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edt_bg"
+                android:hint="Enter Your Username"
+                android:padding="5dp"
+                android:textColorHint="#660E0606"
+                app:boxCornerRadiusBottomEnd="30dp"
+                app:boxCornerRadiusBottomStart="30dp"
+                app:boxCornerRadiusTopEnd="30dp"
+                app:boxCornerRadiusTopStart="30dp"
+                app:hintTextColor="#D7FB0707">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/ic_baseline_account_circle"
+                    android:drawableTint="#8B000000"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="#000000">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_mail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_uname"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_bg"
+                android:hint="Enter Your Email"
+                android:padding="5dp"
+                android:textColorHint="#660E0606"
+                app:boxCornerRadiusBottomEnd="30dp"
+                app:boxCornerRadiusBottomStart="30dp"
+                app:boxCornerRadiusTopEnd="30dp"
+                app:boxCornerRadiusTopStart="30dp"
+                app:hintTextColor="#D7FB0707">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_mail2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/ic_baseline_email"
+                    android:drawableTint="#8B000000"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="#000000">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_mail"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_bg"
+                android:hint="Enter Your Mobilenumber"
+                android:padding="5dp"
+                android:textColorHint="#660E0606"
+                app:boxCornerRadiusBottomEnd="30dp"
+                app:boxCornerRadiusBottomStart="30dp"
+                app:boxCornerRadiusTopEnd="30dp"
+                app:boxCornerRadiusTopStart="30dp"
+                app:hintTextColor="#D7FB0707">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_phone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@drawable/ic_baseline_phone_android"
+                    android:drawableTint="#8B000000"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="#000000">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_pass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_phone"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_bg"
+                android:hint="Enter Your Password"
+                android:padding="5dp"
+                android:textColorHint="#660E0606"
+                app:boxCornerRadiusBottomEnd="30dp"
+                app:boxCornerRadiusBottomStart="30dp"
+                app:boxCornerRadiusTopEnd="30dp"
+                app:boxCornerRadiusTopStart="30dp"
+                app:hintTextColor="#D7FB0707"
+                app:passwordToggleDrawable="@drawable/ic_eye"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#8B000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="#000000">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_pass2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_pass"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_bg"
+                android:hint="Re-enter Your Password"
+                android:padding="5dp"
+                android:textColorHint="#660E0606"
+                app:boxCornerRadiusBottomEnd="30dp"
+                app:boxCornerRadiusBottomStart="30dp"
+                app:boxCornerRadiusTopEnd="30dp"
+                app:boxCornerRadiusTopStart="30dp"
+                app:hintTextColor="#D7FB0707"
+                app:passwordToggleDrawable="@drawable/ic_eye"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#8B000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="#000000">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <android.widget.Button
+                android:id="@+id/btn_signup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_pass2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_bg"
+                android:padding="3dp"
+                android:text="SignUp"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/old_acc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/s1"
         android:padding="10dp"
         android:text="Already have an account? Click here to Login"
         android:textColor="#fff"
         android:textSize="15dp"
         android:textStyle="bold" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+
 

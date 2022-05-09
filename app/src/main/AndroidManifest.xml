@@ -54,7 +54,8 @@
             android:exported="true" />
         <activity
             android:name=".activities.SignUpActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".activities.MainActivity"
             android:exported="true" />
