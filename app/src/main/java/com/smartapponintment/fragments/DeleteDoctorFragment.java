@@ -22,7 +22,7 @@ import com.smartapponintment.models.DoctorModel;
 
 import java.util.ArrayList;
 
-public class DeleteDoctorFragment extends Fragment implements SearchView.OnQueryTextListener {
+public class DeleteDoctorFragment extends Fragment{
 
     private ListView listView;
     private ArrayList<DoctorModel> doctorModelArrayList;
@@ -39,7 +39,7 @@ public class DeleteDoctorFragment extends Fragment implements SearchView.OnQuery
         View rootview = inflater.inflate(R.layout.fragment_delete_doctor, container, false);
 
         searchView = (SearchView)rootview.findViewById(R.id.search);
-        searchView.setOnQueryTextListener(this);
+//        searchView.setOnQueryTextListener(this);
 
         listView = rootview.findViewById(R.id.list_view);
         firebaseDatabase = FirebaseDatabase.getInstance("https://eappointment-b69f7-default-rtdb.asia-southeast1.firebasedatabase.app/");
@@ -65,16 +65,16 @@ public class DeleteDoctorFragment extends Fragment implements SearchView.OnQuery
         return rootview;
     }
 
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        String text = newText;
-        delDocAdapter.filter(text);
-        return false;
-    }
+//    @Override
+//    public boolean onQueryTextSubmit(String query) {
+//
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean onQueryTextChange(String newText) {
+//        String text = newText;
+//        delDocAdapter.filter(text);
+//        return false;
+//    }
 }

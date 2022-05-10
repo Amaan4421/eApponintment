@@ -155,6 +155,9 @@ public class BookDoctorActivity extends AppCompatActivity {
                 editor.putString("D_EMAIL",strDocemail);
                 editor.commit();
                 databaseReference.child(strUid).setValue(appointmentModel);
+
+                Intent i = new Intent(BookDoctorActivity.this,BottomNavActivity.class);
+                startActivity(i);
                 finish();
             }
         });

@@ -84,7 +84,10 @@ public class UpdateActivity extends AppCompatActivity {
                 edtSpeciality.setText("");
                 edtNum.setText("");
 
+                Intent i = new Intent(UpdateActivity.this,BottomAdminActivity.class);
+                startActivity(i);
                 finish();
+
                 }
         });
     }

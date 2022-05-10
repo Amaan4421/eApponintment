@@ -28,6 +28,7 @@ public class AddHospitalFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     EditText edtName,edtEmail,edtAddress,edtNumber;
     Button add;
 
@@ -65,6 +66,10 @@ public class AddHospitalFragment extends Fragment {
                 {
                     Toast.makeText(getActivity(), "Email Required!!!", Toast.LENGTH_SHORT).show();
                 }
+                else if (!strEmail.matches(emailPattern))
+                {
+                    Toast.makeText(getActivity(), "Enter valid Email id", Toast.LENGTH_SHORT).show();
+                }
                 else if(strAddress.equals(""))
                 {
                     Toast.makeText(getActivity(), "Hospital Address Required!!!", Toast.LENGTH_SHORT).show();
@@ -72,6 +77,10 @@ public class AddHospitalFragment extends Fragment {
                 else if(strNumber.equals(""))
                 {
                     Toast.makeText(getActivity(), "Number Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if(strNumber.length()>10 || strNumber.length()<10)
+                {
+                    Toast.makeText(getActivity(), "Mobile number must be have only 10 digits", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {

@@ -65,6 +65,9 @@ public class DeleteActivity extends AppCompatActivity {
 
                 Toast.makeText(DeleteActivity.this,"Doctor Deleted Successfully!!!",Toast.LENGTH_SHORT).show();
                 databaseReference.child(strId).removeValue();
+
+                Intent i = new Intent(DeleteActivity.this,BottomAdminActivity.class);
+                startActivity(i);
                 finish();
 
             }

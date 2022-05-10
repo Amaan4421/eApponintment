@@ -27,6 +27,7 @@ public class AddDoctorFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     EditText edtName, edtDegree, edtEmail, edtHosname, edtNumber, edtSpeciality;
     Button add;
 
@@ -70,9 +71,17 @@ public class AddDoctorFragment extends Fragment {
                 {
                     Toast.makeText(getActivity(), "Number Required!!!", Toast.LENGTH_SHORT).show();
                 }
+                else if(strNumber.length()>10 || strNumber.length()<10)
+                {
+                    Toast.makeText(getActivity(), "Mobile number must be have only 10 digits", Toast.LENGTH_SHORT).show();
+                }
                 else if(strEmail.equals(""))
                 {
                     Toast.makeText(getActivity(), "Email Required!!!", Toast.LENGTH_SHORT).show();
+                }
+                else if (!strEmail.matches(emailPattern))
+                {
+                    Toast.makeText(getActivity(), "Enter valid Email id", Toast.LENGTH_SHORT).show();
                 }
                 else if(strHospname.equals(""))
                 {

@@ -97,7 +97,7 @@ public class SignUpActivity extends AppCompatActivity {
                 }
                 else if(strNum.length()>10 || strNum.length()<10)
                 {
-                    Toast.makeText(SignUpActivity.this, "Password must be have 10 digits", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Mobile number must be have only 10 digits", Toast.LENGTH_SHORT).show();
                 }
                 else if (strPassword.equals(""))
                 {
