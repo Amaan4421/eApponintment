@@ -17,9 +17,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.smartapponintment.R;
@@ -43,6 +45,7 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,46 +129,59 @@ public class SignUpActivity extends AppCompatActivity {
                         firebaseAuth.createUserWithEmailAndPassword(strEmail, strPassword).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful())
-                                {
-                                    String uID = firebaseAuth.getUid();
-                                    RegisterModel registerModel = new RegisterModel();
-                                    registerModel.setUser_id(uID);
-                                    registerModel.setUser_firstName(strFname);
-                                    registerModel.setUser_email(strEmail);
-                                    registerModel.setUser_mobileNumbr(strNum);
-                                    SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                                    editor.putString("KEY_USERID", uID);
-                                    editor.putString("KEY_PREF_EMAIL", strEmail);
-                                    editor.putString("KEY_PREF_USERNAME", strFname);
-                                    editor.putString("KEY_PREF_MOBILENUMBER", strNum);
-                                    editor.remove("KEY_PREF_BG");
-                                    editor.remove("KEY_PREF_ADDRESS");
-                                    editor.remove("KEY_PREF_DOB");
-                                    editor.remove("KEY_USERURL");
+                                if (task.isSuccessful()) {
+                                    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                                    firebaseUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            if (task.isSuccessful()) {
 
-                                if (edtB2.isChecked())
-                                {
-                                    Toast.makeText(SignUpActivity.this,"Welcome "+strFname,Toast.LENGTH_SHORT).show();
-                                    registerModel.setUser_Role(strB2);
-                                    editor.putString("KEY_USERROLE",strB2);
-                                    Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
-                                    startActivity(i);
-                                    finish();
+                                                Toast.makeText(SignUpActivity.this, "Email is sent to you for verification!!!", Toast.LENGTH_SHORT).show();
+                                                String uID = firebaseAuth.getUid();
+                                                RegisterModel registerModel = new RegisterModel();
+                                                registerModel.setUser_id(uID);
+                                                registerModel.setUser_firstName(strFname);
+                                                registerModel.setUser_email(strEmail);
+                                                registerModel.setUser_mobileNumbr(strNum);
+                                                SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
+                                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                                editor.putString("KEY_USERID", uID);
+                                                editor.putString("KEY_PREF_EMAIL", strEmail);
+                                                editor.putString("KEY_PREF_USERNAME", strFname);
+                                                editor.putString("KEY_PREF_MOBILENUMBER", strNum);
+                                                editor.remove("KEY_PREF_BG");
+                                                editor.remove("KEY_PREF_ADDRESS");
+                                                editor.remove("KEY_PREF_DOB");
+                                                editor.remove("KEY_USERURL");
+
+                                                if (edtB2.isChecked())
+                                                {
+                                                    Toast.makeText(SignUpActivity.this, "Welcome " + strFname, Toast.LENGTH_LONG).show();
+                                                    registerModel.setUser_Role(strB2);
+                                                    editor.putString("KEY_USERROLE", strB2);
+                                                    Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
+                                                    startActivity(i);
+                                                    finish();
+                                                }
+                                                else
+                                                {
+                                                    Toast.makeText(SignUpActivity.this, "Welcome " + strFname, Toast.LENGTH_LONG).show();
+                                                    registerModel.setUser_Role(strB1);
+                                                    editor.putString("KEY_USERROLE", strB1);
+                                                    Intent i = new Intent(SignUpActivity.this, BottomDocActivity.class);
+                                                    startActivity(i);
+                                                    finish();
+                                                }
+                                                editor.commit();
+                                                databaseReference.child(uID).setValue(registerModel);
+                                            }
+                                            else
+                                            {
+                                                Toast.makeText(SignUpActivity.this, "Server Error!!!", Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                    });
                                 }
-                                else
-                                {
-                                    Toast.makeText(SignUpActivity.this,"Welcome "+strFname,Toast.LENGTH_SHORT).show();
-                                    registerModel.setUser_Role(strB1);
-                                    editor.putString("KEY_USERROLE",strB1);
-                                    Intent i = new Intent(SignUpActivity.this, BottomDocActivity.class);
-                                    startActivity(i);
-                                    finish();
-                                }
-                                    editor.commit();
-                                    databaseReference.child(uID).setValue(registerModel);
-                            }
                             }
                         });
                     }

@@ -69,7 +69,7 @@ public class ScheduleFragment extends Fragment {
                     scheduleAdapter = new ScheduleAdapter(getActivity(), appointmentModelArrayList);
                     if(scheduleAdapter.isEmpty())
                     {
-                        Toast.makeText(getActivity(), "You don't have any appointments!!!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "No appointments Today!!!", Toast.LENGTH_LONG).show();
                     }
                     else
                     {

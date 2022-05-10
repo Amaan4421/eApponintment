@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     String passAdmin = "admin273";
 
     private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
 
@@ -144,59 +146,67 @@ public class LoginActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful())
                                     {
-                                        String strUID = firebaseAuth.getUid();
-                                        databaseReference.child(strUID).addListenerForSingleValueEvent(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            RegisterModel registerModel = snapshot.getValue(RegisterModel.class);
-                                            String loginEmail = registerModel.getUser_email();
-                                            String loginName = registerModel.getUser_firstName();
-                                            String loginMobilenumber = registerModel.getUser_mobileNumbr();
-                                            String loginDob = registerModel.getUser_DOB();
-                                            String loginAddress = registerModel.getUser_Address();
-                                            String loginBG = registerModel.getUser_BG();
-                                            String loginUrl = registerModel.getUser_Url();
-                                            String loginRole = registerModel.getUser_Role();
-                                            SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
-                                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                                            editor.putString("KEY_USERID",strUID);
-                                            editor.putString("KEY_PREF_EMAIL", loginEmail);
-                                            editor.putString("KEY_PREF_USERNAME", loginName);
-                                            editor.putString("KEY_PREF_MOBILENUMBER", loginMobilenumber);
-                                            editor.putString("KEY_PREF_DOB", loginDob);
-                                            editor.putString("KEY_PREF_ADDRESS", loginAddress);
-                                            editor.putString("KEY_PREF_BG", loginBG);
-                                            editor.putString("KEY_USERURL",loginUrl);
-                                            editor.putString("KEY_USERROLE",loginRole);
-                                            editor.commit();
+                                        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                                        if(firebaseUser.isEmailVerified())
+                                        {
+                                            String strUID = firebaseAuth.getUid();
+                                            databaseReference.child(strUID).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                @Override
+                                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                    RegisterModel registerModel = snapshot.getValue(RegisterModel.class);
+                                                    String loginEmail = registerModel.getUser_email();
+                                                    String loginName = registerModel.getUser_firstName();
+                                                    String loginMobilenumber = registerModel.getUser_mobileNumbr();
+                                                    String loginDob = registerModel.getUser_DOB();
+                                                    String loginAddress = registerModel.getUser_Address();
+                                                    String loginBG = registerModel.getUser_BG();
+                                                    String loginUrl = registerModel.getUser_Url();
+                                                    String loginRole = registerModel.getUser_Role();
+                                                    SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
+                                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                                    editor.putString("KEY_USERID",strUID);
+                                                    editor.putString("KEY_PREF_EMAIL", loginEmail);
+                                                    editor.putString("KEY_PREF_USERNAME", loginName);
+                                                    editor.putString("KEY_PREF_MOBILENUMBER", loginMobilenumber);
+                                                    editor.putString("KEY_PREF_DOB", loginDob);
+                                                    editor.putString("KEY_PREF_ADDRESS", loginAddress);
+                                                    editor.putString("KEY_PREF_BG", loginBG);
+                                                    editor.putString("KEY_USERURL",loginUrl);
+                                                    editor.putString("KEY_USERROLE",loginRole);
+                                                    editor.commit();
 
-                                            if (loginRole.equals("Patient"))
-                                            {
-                                                Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
-                                                Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
-                                                startActivity(i);
-                                                finish();
-                                            }
-                                            if (loginRole.equals("Doctor"))
-                                            {
-                                                Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
-                                                Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
-                                                startActivity(i);
-                                                finish();
-                                            }
+                                                    if (loginRole.equals("Patient"))
+                                                    {
+                                                        Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
+                                                        Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
+                                                        startActivity(i);
+                                                        finish();
+                                                    }
+                                                    if (loginRole.equals("Doctor"))
+                                                    {
+                                                        Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
+                                                        Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
+                                                        startActivity(i);
+                                                        finish();
+                                                    }
+                                                }
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError error) {
+                                                }
+                                            });
                                         }
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
+                                        else
+                                        {
+                                            Toast.makeText(LoginActivity.this,"Your email is not verified yet!!!",Toast.LENGTH_LONG).show();
                                         }
-                                    });
+                                    }
+                                    else
+                                    {
+                                        Toast.makeText(LoginActivity.this, "Wrong Credentials!!!", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                                else
-                                {
-                                    Toast.makeText(LoginActivity.this, "Wrong Credentials!!!", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });//end of firebase auth
-                    }
+                            });//end of firebase auth
+                        }
                 }
             }
         });
