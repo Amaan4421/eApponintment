@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -67,14 +66,7 @@ public class ScheduleFragment extends Fragment {
                         appointmentModelArrayList.add(appointmentModel2);
                     }
                     scheduleAdapter = new ScheduleAdapter(getActivity(), appointmentModelArrayList);
-                    if(scheduleAdapter.isEmpty())
-                    {
-                        Toast.makeText(getActivity(), "No appointments Today!!!", Toast.LENGTH_LONG).show();
-                    }
-                    else
-                    {
-                        listView.setAdapter(scheduleAdapter);
-                    }
+                    listView.setAdapter(scheduleAdapter);
                 }
             }
 

@@ -31,6 +31,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -60,7 +61,9 @@ public class ProfileFragment extends Fragment {
         FirebaseDatabase firebaseDatabase;
         DatabaseReference databaseReference;
         FirebaseStorage firebaseStorage;
+        FirebaseUser  firebaseUser;
         private String imageUrl;
+        Bitmap bitmap;
 
         @Nullable
         @Override
@@ -72,6 +75,7 @@ public class ProfileFragment extends Fragment {
                 databaseReference = firebaseDatabase.getReference("Register");
                 firebaseStorage = FirebaseStorage.getInstance();
                 firebaseAuth = FirebaseAuth.getInstance();
+                firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
                 submitChanges = rootView.findViewById(R.id.save);
                 changePassword = rootView.findViewById(R.id.CP);
@@ -81,6 +85,8 @@ public class ProfileFragment extends Fragment {
                 edtBg = rootView.findViewById(R.id.text5_1);
                 edtAddress = rootView.findViewById(R.id.text6_1);
                 edtDob = rootView.findViewById(R.id.text4_1);
+
+//                bitmap = rootView.findViewById(R.drawable.ic_baseline_account_circle);
 
                 Calendar calendar =Calendar.getInstance();
                 date = calendar.get(Calendar.DAY_OF_MONTH);
@@ -105,7 +111,14 @@ public class ProfileFragment extends Fragment {
                 String strDOB = sharedPreferences.getString("KEY_PREF_DOB","");
                 edtDob.setText(strDOB);
                 String strUrl = sharedPreferences.getString("KEY_USERURL","");
-                Glide.with(getActivity()).load(strUrl).into(imageView);
+                if(strUrl.equals(""))
+                {
+                        imageView.setImageResource(R.drawable.ic_baseline_account_circle);
+                }
+                else
+                {
+                        Glide.with(getActivity()).load(strUrl).into(imageView);
+                }
 
                 imageView.setOnClickListener(new View.OnClickListener() {
                         @Override

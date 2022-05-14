@@ -94,11 +94,11 @@ public class LoginActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful())
                                     {
-                                        Toast.makeText(LoginActivity.this, "We have sent an email to your email id!!!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "We have sent a password reset link to your email!!!", Toast.LENGTH_LONG).show();
                                     }
                                     else
                                     {
-                                        Toast.makeText(LoginActivity.this, "Server error!!!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Please enter valid email!!!", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
@@ -177,14 +177,14 @@ public class LoginActivity extends AppCompatActivity {
 
                                                     if (loginRole.equals("Patient"))
                                                     {
-                                                        Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(LoginActivity.this,"Welcome "+loginName,Toast.LENGTH_SHORT).show();
                                                         Intent i = new Intent(LoginActivity.this, BottomNavActivity.class);
                                                         startActivity(i);
                                                         finish();
                                                     }
                                                     if (loginRole.equals("Doctor"))
                                                     {
-                                                        Toast.makeText(LoginActivity.this,"Welcome again "+loginName,Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(LoginActivity.this,"Welcome "+loginName,Toast.LENGTH_SHORT).show();
                                                         Intent i = new Intent(LoginActivity.this, BottomDocActivity.class);
                                                         startActivity(i);
                                                         finish();

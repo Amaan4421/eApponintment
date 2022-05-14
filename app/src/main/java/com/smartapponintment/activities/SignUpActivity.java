@@ -45,7 +45,6 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     FirebaseAuth firebaseAuth;
-    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,7 +135,7 @@ public class SignUpActivity extends AppCompatActivity {
                                         public void onSuccess(Void unused) {
                                             if (task.isSuccessful()) {
 
-                                                Toast.makeText(SignUpActivity.this, "Email is sent to you for verification!!!", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(SignUpActivity.this, "We have sent an Email to you for verification!!!", Toast.LENGTH_SHORT).show();
                                                 String uID = firebaseAuth.getUid();
                                                 RegisterModel registerModel = new RegisterModel();
                                                 registerModel.setUser_id(uID);
@@ -156,24 +155,19 @@ public class SignUpActivity extends AppCompatActivity {
 
                                                 if (edtB2.isChecked())
                                                 {
-                                                    Toast.makeText(SignUpActivity.this, "Welcome " + strFname, Toast.LENGTH_LONG).show();
                                                     registerModel.setUser_Role(strB2);
                                                     editor.putString("KEY_USERROLE", strB2);
-                                                    Intent i = new Intent(SignUpActivity.this, BottomNavActivity.class);
-                                                    startActivity(i);
-                                                    finish();
                                                 }
                                                 else
                                                 {
-                                                    Toast.makeText(SignUpActivity.this, "Welcome " + strFname, Toast.LENGTH_LONG).show();
                                                     registerModel.setUser_Role(strB1);
                                                     editor.putString("KEY_USERROLE", strB1);
-                                                    Intent i = new Intent(SignUpActivity.this, BottomDocActivity.class);
-                                                    startActivity(i);
-                                                    finish();
                                                 }
                                                 editor.commit();
                                                 databaseReference.child(uID).setValue(registerModel);
+                                                Intent i = new Intent(SignUpActivity.this, LoginActivity.class);
+                                                startActivity(i);
+                                                finish();
                                             }
                                             else
                                             {

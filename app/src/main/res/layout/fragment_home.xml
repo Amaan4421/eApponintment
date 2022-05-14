@@ -11,14 +11,18 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPage"
-        android:layout_width="match_parent"
-        android:layout_height="250dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="245dp"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/viewPage"
+        android:layout_below="@+id/viewPage"
         android:text="Categories:"
         android:layout_marginTop="10dp"
         android:textColor="#000000"
