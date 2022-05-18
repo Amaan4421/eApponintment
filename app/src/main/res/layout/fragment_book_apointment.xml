@@ -15,6 +15,7 @@
         android:queryHint="Search doctor name..."
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:background="#8C8989"
         android:iconifiedByDefault="false">
 

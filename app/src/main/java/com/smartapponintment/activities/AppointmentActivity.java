@@ -2,12 +2,14 @@ package com.smartapponintment.activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,6 +17,9 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.smartapponintment.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -27,6 +32,7 @@ public class AppointmentActivity extends AppCompatActivity {
     Button btnCancel;
     Toolbar toolbar;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,32 +64,45 @@ public class AppointmentActivity extends AppCompatActivity {
         tvAdate.setText(strAdate);
         tvAtime.setText(strAtime);
 
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        Calendar calendar = Calendar.getInstance();
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(AppointmentActivity.this);
-                builder.setTitle("eAppointment");
-                builder.setIcon(R.drawable.applogo);
-                builder.setMessage("Are you sure, you want to cancel this Appointment?");
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(AppointmentActivity.this,"Appointment Deleted!!!",Toast.LENGTH_SHORT).show();
-                        databaseReference.child(strId).removeValue();
-                        Intent i = new Intent(AppointmentActivity.this,ShowAppointmentActivity.class);
-                        startActivity(i);
-                        finish();
-                    }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                builder.show();
-            }
-        });
+        SimpleDateFormat format1 = new SimpleDateFormat("dd/M/yyyy");
+        String cDate = format1.format(calendar.getTime());
+
+        if(cDate.matches(strAdate))
+        {
+            Toast.makeText(AppointmentActivity.this,"You can't cancel your appointment on appointment's day!!!",Toast.LENGTH_LONG).show();
+            btnCancel.setEnabled(false);
+        }
+        else
+        {
+            btnCancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(AppointmentActivity.this);
+                    builder.setTitle("eAppointment");
+                    builder.setIcon(R.drawable.applogo);
+                    builder.setMessage("Are you sure, you want to cancel this Appointment?");
+                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Toast.makeText(AppointmentActivity.this, "Appointment Cancelled!!!", Toast.LENGTH_SHORT).show();
+                            databaseReference.child(strId).removeValue();
+                            Intent i = new Intent(AppointmentActivity.this, ShowAppointmentActivity.class);
+                            startActivity(i);
+                            finish();
+                        }
+                    });
+                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.show();
+                }
+            });
+        }
     }
 }
