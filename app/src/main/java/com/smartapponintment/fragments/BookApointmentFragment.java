@@ -25,7 +25,7 @@ import com.smartapponintment.models.DoctorModel;
 
 import java.util.ArrayList;
 
-public class BookApointmentFragment extends Fragment {
+public class BookApointmentFragment extends Fragment{
 
     private ListView listView;
     private ArrayList<DoctorModel> doctorModelArrayList;
@@ -42,7 +42,21 @@ public class BookApointmentFragment extends Fragment {
         View rootview = inflater.inflate(R.layout.fragment_book_apointment,container,false);
 
         searchView = rootview.findViewById(R.id.search);
-//        searchView.setOnQueryTextListener(this);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+
+                String text = s;
+                docAdapter.filter(text);
+
+                return false;
+            }
+        });
 
         tvShow = rootview.findViewById(R.id.show);
         tvShow.setOnClickListener(new View.OnClickListener() {
@@ -78,15 +92,4 @@ public class BookApointmentFragment extends Fragment {
         });
         return rootview;
     }
-//    @Override
-//    public boolean onQueryTextSubmit(String s) {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean onQueryTextChange(String s) {
-//        String  text = s;
-//        docAdapter.filter(text);
-//        return false;
-//    }
 }

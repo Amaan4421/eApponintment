@@ -153,14 +153,19 @@ public class BookDoctorActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    //start of if
+                    //check appointment date is less then current date
                     if (aDate < tDate)
                     {
+                        //start of inner if
                         if(aMonth <= tMonth)
                         {
+                            //start of second inner if
                             if(aYear <= tYear)
                             {
                                 Toast.makeText(BookDoctorActivity.this, "You can't choose past dates!!!", Toast.LENGTH_SHORT).show();
-                            }
+                            }//end of seconf inner if
+                            //start of second inner else
                             else
                             {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(BookDoctorActivity.this);
@@ -219,17 +224,82 @@ public class BookDoctorActivity extends AppCompatActivity {
                                     }
                                 });
                                 builder.show();
-                            }
-                        }
-                    }
-                    else
-                    {
-                        if(aMonth <= tMonth)
+                            }//ens of second inner else
+                        }//end of inner if
+                        //start of inner else
+                        else
                         {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(BookDoctorActivity.this);
+                            builder.setTitle("eAppointment");
+                            builder.setIcon(R.drawable.applogo);
+                            builder.setMessage("By clicking Yes means you confirm this appointment.");
+                            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int j) {
+                                    Toast.makeText(BookDoctorActivity.this, "Your appointment is booked successfully!!!", Toast.LENGTH_LONG).show();
+
+                                    SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    String strPid = sharedPreferences.getString("KEY_USERID", "");
+                                    String strUid = databaseReference.push().getKey();
+
+                                    AppointmentModel appointmentModel = new AppointmentModel();
+                                    appointmentModel.setA_Id(strUid);
+                                    appointmentModel.setP_Id(strPid);
+                                    appointmentModel.setP_Name(strPname);
+                                    appointmentModel.setP_Num(strPnum);
+                                    appointmentModel.setP_Date(strDate);
+                                    appointmentModel.setP_Time(strTime);
+                                    appointmentModel.setDoc_id(strId);
+                                    appointmentModel.setDoc_Name(strName);
+                                    appointmentModel.setDoc_Hospname(strHospname);
+                                    appointmentModel.setDoc_Sp(strSpeciality);
+                                    appointmentModel.setDoc_Degree(strDegree);
+                                    appointmentModel.setDoc_Num(strNum);
+                                    appointmentModel.setDoc_Email(strDocemail);
+                                    editor.putString("A_ID", strUid);
+                                    editor.putString("P_ID", strPid);
+                                    editor.putString("P_NAME", strPname);
+                                    editor.putString("P_NUMBER", strPnum);
+                                    editor.putString("P_DATE", strDate);
+                                    editor.putString("P_TIME", strTime);
+                                    editor.putString("D_ID", strId);
+                                    editor.putString("D_NAME", strName);
+                                    editor.putString("D_HOSPNAME", strHospname);
+                                    editor.putString("D_SP", strSpeciality);
+                                    editor.putString("D_DEGREE", strDegree);
+                                    editor.putString("D_NUM", strNum);
+                                    editor.putString("D_EMAIL", strDocemail);
+                                    editor.commit();
+                                    databaseReference.child(strUid).setValue(appointmentModel);
+
+                                    Intent i = new Intent(BookDoctorActivity.this, BottomNavActivity.class);
+                                    startActivity(i);
+                                    finish();
+                                }
+                            });
+                            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    dialogInterface.dismiss();
+                                }
+                            });
+                            builder.show();
+                        }//end of inner else
+                    }//end of if
+                    //start of elseif
+                    //check appointment date is greater than current date
+                    else if(aDate > tDate)
+                    {
+                        //start of if
+                        if(aMonth < tMonth)
+                        {
+                            //start of inner if
                             if (aYear <= tYear)
                             {
                                 Toast.makeText(BookDoctorActivity.this, "You can't choose past dates!!!", Toast.LENGTH_SHORT).show();
-                            }
+                            }//end of inner if
+                            //start of inner else
                             else
                             {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(BookDoctorActivity.this);
@@ -288,11 +358,224 @@ public class BookDoctorActivity extends AppCompatActivity {
                                     }
                                 });
                                 builder.show();
-                            }
-                        }
-                    }
-                }
-            }
-        });
+                            }//end of inner else
+                        }//end of if
+                        //start of else
+                        else
+                        {
+                            //start of if
+                            if(aYear < tYear)
+                            {
+                                Toast.makeText(BookDoctorActivity.this, "You can't choose past dates!!!", Toast.LENGTH_SHORT).show();
+                            }//end of if
+                            //start of inner else
+                            else
+                            {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(BookDoctorActivity.this);
+                                builder.setTitle("eAppointment");
+                                builder.setIcon(R.drawable.applogo);
+                                builder.setMessage("By clicking Yes means you confirm this appointment.");
+                                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int j) {
+                                        Toast.makeText(BookDoctorActivity.this, "Your appointment is booked successfully!!!", Toast.LENGTH_LONG).show();
+
+                                        SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                        String strPid = sharedPreferences.getString("KEY_USERID", "");
+                                        String strUid = databaseReference.push().getKey();
+
+                                        AppointmentModel appointmentModel = new AppointmentModel();
+                                        appointmentModel.setA_Id(strUid);
+                                        appointmentModel.setP_Id(strPid);
+                                        appointmentModel.setP_Name(strPname);
+                                        appointmentModel.setP_Num(strPnum);
+                                        appointmentModel.setP_Date(strDate);
+                                        appointmentModel.setP_Time(strTime);
+                                        appointmentModel.setDoc_id(strId);
+                                        appointmentModel.setDoc_Name(strName);
+                                        appointmentModel.setDoc_Hospname(strHospname);
+                                        appointmentModel.setDoc_Sp(strSpeciality);
+                                        appointmentModel.setDoc_Degree(strDegree);
+                                        appointmentModel.setDoc_Num(strNum);
+                                        appointmentModel.setDoc_Email(strDocemail);
+                                        editor.putString("A_ID", strUid);
+                                        editor.putString("P_ID", strPid);
+                                        editor.putString("P_NAME", strPname);
+                                        editor.putString("P_NUMBER", strPnum);
+                                        editor.putString("P_DATE", strDate);
+                                        editor.putString("P_TIME", strTime);
+                                        editor.putString("D_ID", strId);
+                                        editor.putString("D_NAME", strName);
+                                        editor.putString("D_HOSPNAME", strHospname);
+                                        editor.putString("D_SP", strSpeciality);
+                                        editor.putString("D_DEGREE", strDegree);
+                                        editor.putString("D_NUM", strNum);
+                                        editor.putString("D_EMAIL", strDocemail);
+                                        editor.commit();
+                                        databaseReference.child(strUid).setValue(appointmentModel);
+
+                                        Intent i = new Intent(BookDoctorActivity.this, BottomNavActivity.class);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                });
+                                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.dismiss();
+                                    }
+                                });
+                                builder.show();
+                            }//end of inner else
+                        }//end of else
+                    }//end of elseif
+                    //start of else
+                    //when appointment date is equals to current date
+                    else
+                    {
+                        //start of if
+                        if(aMonth < tMonth)
+                        {
+                            //start of inner if
+                            if(aYear <= tYear)
+                            {
+                                Toast.makeText(BookDoctorActivity.this, "You can't choose past dates!!!", Toast.LENGTH_SHORT).show();
+
+                            }//end of inner if
+                            //start of inner else
+                            else
+                            {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(BookDoctorActivity.this);
+                                builder.setTitle("eAppointment");
+                                builder.setIcon(R.drawable.applogo);
+                                builder.setMessage("By clicking Yes means you confirm this appointment.");
+                                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int j) {
+                                        Toast.makeText(BookDoctorActivity.this, "Your appointment is booked successfully!!!", Toast.LENGTH_LONG).show();
+
+                                        SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                        String strPid = sharedPreferences.getString("KEY_USERID", "");
+                                        String strUid = databaseReference.push().getKey();
+
+                                        AppointmentModel appointmentModel = new AppointmentModel();
+                                        appointmentModel.setA_Id(strUid);
+                                        appointmentModel.setP_Id(strPid);
+                                        appointmentModel.setP_Name(strPname);
+                                        appointmentModel.setP_Num(strPnum);
+                                        appointmentModel.setP_Date(strDate);
+                                        appointmentModel.setP_Time(strTime);
+                                        appointmentModel.setDoc_id(strId);
+                                        appointmentModel.setDoc_Name(strName);
+                                        appointmentModel.setDoc_Hospname(strHospname);
+                                        appointmentModel.setDoc_Sp(strSpeciality);
+                                        appointmentModel.setDoc_Degree(strDegree);
+                                        appointmentModel.setDoc_Num(strNum);
+                                        appointmentModel.setDoc_Email(strDocemail);
+                                        editor.putString("A_ID", strUid);
+                                        editor.putString("P_ID", strPid);
+                                        editor.putString("P_NAME", strPname);
+                                        editor.putString("P_NUMBER", strPnum);
+                                        editor.putString("P_DATE", strDate);
+                                        editor.putString("P_TIME", strTime);
+                                        editor.putString("D_ID", strId);
+                                        editor.putString("D_NAME", strName);
+                                        editor.putString("D_HOSPNAME", strHospname);
+                                        editor.putString("D_SP", strSpeciality);
+                                        editor.putString("D_DEGREE", strDegree);
+                                        editor.putString("D_NUM", strNum);
+                                        editor.putString("D_EMAIL", strDocemail);
+                                        editor.commit();
+                                        databaseReference.child(strUid).setValue(appointmentModel);
+
+                                        Intent i = new Intent(BookDoctorActivity.this, BottomNavActivity.class);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                });
+                                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.dismiss();
+                                    }
+                                });
+                                builder.show();
+                            }//end of inner else
+                        }//end of if
+                        //start of else
+                        else
+                        {
+                            //start of inner if
+                            if(aYear < tYear)
+                            {
+                                Toast.makeText(BookDoctorActivity.this, "You can't choose past dates!!!", Toast.LENGTH_SHORT).show();
+                            }//end of inner if
+                            //start of inner else
+                            else
+                            {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(BookDoctorActivity.this);
+                                builder.setTitle("eAppointment");
+                                builder.setIcon(R.drawable.applogo);
+                                builder.setMessage("By clicking Yes means you confirm this appointment.");
+                                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int j) {
+                                        Toast.makeText(BookDoctorActivity.this, "Your appointment is booked successfully!!!", Toast.LENGTH_LONG).show();
+
+                                        SharedPreferences sharedPreferences = getSharedPreferences("e_Appointment", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                        String strPid = sharedPreferences.getString("KEY_USERID", "");
+                                        String strUid = databaseReference.push().getKey();
+
+                                        AppointmentModel appointmentModel = new AppointmentModel();
+                                        appointmentModel.setA_Id(strUid);
+                                        appointmentModel.setP_Id(strPid);
+                                        appointmentModel.setP_Name(strPname);
+                                        appointmentModel.setP_Num(strPnum);
+                                        appointmentModel.setP_Date(strDate);
+                                        appointmentModel.setP_Time(strTime);
+                                        appointmentModel.setDoc_id(strId);
+                                        appointmentModel.setDoc_Name(strName);
+                                        appointmentModel.setDoc_Hospname(strHospname);
+                                        appointmentModel.setDoc_Sp(strSpeciality);
+                                        appointmentModel.setDoc_Degree(strDegree);
+                                        appointmentModel.setDoc_Num(strNum);
+                                        appointmentModel.setDoc_Email(strDocemail);
+                                        editor.putString("A_ID", strUid);
+                                        editor.putString("P_ID", strPid);
+                                        editor.putString("P_NAME", strPname);
+                                        editor.putString("P_NUMBER", strPnum);
+                                        editor.putString("P_DATE", strDate);
+                                        editor.putString("P_TIME", strTime);
+                                        editor.putString("D_ID", strId);
+                                        editor.putString("D_NAME", strName);
+                                        editor.putString("D_HOSPNAME", strHospname);
+                                        editor.putString("D_SP", strSpeciality);
+                                        editor.putString("D_DEGREE", strDegree);
+                                        editor.putString("D_NUM", strNum);
+                                        editor.putString("D_EMAIL", strDocemail);
+                                        editor.commit();
+                                        databaseReference.child(strUid).setValue(appointmentModel);
+
+                                        Intent i = new Intent(BookDoctorActivity.this, BottomNavActivity.class);
+                                        startActivity(i);
+                                        finish();
+                                    }
+                                });
+                                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.dismiss();
+                                    }
+                                });
+                                builder.show();
+                            }//end of inner else
+                        }//end of else
+                    }//end of main else
+                }//end of validations
+            }//end of onclick method
+        });//end of btnclick method
     }
 }

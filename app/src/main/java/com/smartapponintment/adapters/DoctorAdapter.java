@@ -84,20 +84,21 @@ public class DoctorAdapter extends BaseAdapter{
         return convertView;
     }
 
-    public void filter(String charText) {
-        charText = charText.toLowerCase(Locale.getDefault());
+    public void filter(String text) {
+        text = text.toLowerCase(Locale.getDefault());
         doctorModelArrayList.clear();
-        if (charText.length() == 0)
+        if(text.length() == 0)
         {
             doctorModelArrayList.addAll(doctorModelArrayListFiltered);
+
         }
         else
         {
-            for (DoctorModel wp : doctorModelArrayListFiltered)
+            for(DoctorModel d : doctorModelArrayListFiltered)
             {
-                if (wp.getDoc_Name().toLowerCase(Locale.getDefault()).contains(charText))
+                if(d.getDoc_Name().toLowerCase(Locale.getDefault()).contains(text))
                 {
-                    doctorModelArrayList.add(wp);
+                    doctorModelArrayList.add(d);
                 }
             }
         }
